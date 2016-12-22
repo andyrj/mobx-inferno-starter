@@ -1,10 +1,17 @@
 'use strict'
 import { observable } from 'mobx'
+import { Home, NoMatch } from './views'
 
-const store = observable({
-  path: '/'
+export const store = observable({
+  path: '/',
+  routes: [
+    {
+      path: '/',
+      component: Home
+    },
+    {
+      path: '*',
+      component: NoMatch
+    }
+  ]
 })
-
-module.exports = {
-  store
-}
