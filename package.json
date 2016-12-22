@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist && mkdir -p dist/ && cp index.html dist/",
     "predev": "npm run clean",
-    "dev": "webpack-dev-server --content-base dist/ --inline --hot --config build/webpack.client.conf",
+    "dev": "webpack-dev-server --content-base dist/ --config build/webpack.client.conf",
     "build": "npm run clean && npm run build:client-prod && npm run build:prerender-prod",
     "build:dev": "npm run clean && npm run build:client-dev && npm run build:prerender-dev",
     "build:client-prod": "NODE_ENV=production webpack --optimize-minimize --config build/webpack.client.conf.js --progress --hide-modules",
