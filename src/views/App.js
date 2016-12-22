@@ -8,7 +8,7 @@ export default ({ store }) => {
     <Provider store={ store } >
       <div>
         <p>{ store.path }</p>
-        <Link text="test" path="/test" />
+        <Link path="/test">test</Link>
       </div>
     </Provider>
   )

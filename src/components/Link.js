@@ -7,10 +7,10 @@ const changeRoute = (props, event) => {
   store.path = props.path
 }
 
-export default ({ text, path }) => {
+export default ({ path, children }) => {
   return (
   <a href={ path } onClick={ linkEvent({ path }, changeRoute) } >
-    { text }
+    { children }
   </a>
   )
 }
