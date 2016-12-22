@@ -2860,35 +2860,35 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-inferno-component@1.0.0-beta38:
-  version "1.0.0-beta38"
-  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.0.0-beta38.tgz#820a0bd018cc001b3ea3baae818430b047d75bc6"
+inferno-component@1.0.0-beta39:
+  version "1.0.0-beta39"
+  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.0.0-beta39.tgz#5ea33783d85764b89d7b3384e89e8cf170a88fc8"
   dependencies:
-    inferno "1.0.0-beta38"
-    inferno-component "1.0.0-beta38"
+    inferno "1.0.0-beta39"
+    inferno-component "1.0.0-beta39"
 
-inferno-create-element@1.0.0-beta38:
-  version "1.0.0-beta38"
-  resolved "https://registry.yarnpkg.com/inferno-create-element/-/inferno-create-element-1.0.0-beta38.tgz#cb06717d37ff73c213a804beefec854d21e83d3d"
+inferno-create-element@1.0.0-beta39:
+  version "1.0.0-beta39"
+  resolved "https://registry.yarnpkg.com/inferno-create-element/-/inferno-create-element-1.0.0-beta39.tgz#e8874ed37d9885178e6a1172e5dbbf250eede723"
   dependencies:
-    inferno "1.0.0-beta38"
+    inferno "1.0.0-beta39"
 
-inferno-devtools@1.0.0-beta38:
-  version "1.0.0-beta38"
-  resolved "https://registry.yarnpkg.com/inferno-devtools/-/inferno-devtools-1.0.0-beta38.tgz#b3455b3b342fb4c4a941e9efe55547d94ff3e5be"
+inferno-devtools@1.0.0-beta39:
+  version "1.0.0-beta39"
+  resolved "https://registry.yarnpkg.com/inferno-devtools/-/inferno-devtools-1.0.0-beta39.tgz#20e7fcb3e7438bd9a831df336ffb95e7376b1492"
   dependencies:
-    inferno "1.0.0-beta38"
+    inferno "1.0.0-beta39"
 
-inferno-mobx@1.0.0-beta38:
-  version "1.0.0-beta38"
-  resolved "https://registry.yarnpkg.com/inferno-mobx/-/inferno-mobx-1.0.0-beta38.tgz#682cc606fc47bf464065eb8be67333e226cee5b0"
+inferno-mobx@1.0.0-beta39:
+  version "1.0.0-beta39"
+  resolved "https://registry.yarnpkg.com/inferno-mobx/-/inferno-mobx-1.0.0-beta39.tgz#306cb5a82f05644d860402a031347105aaf7cd22"
   dependencies:
-    inferno "1.0.0-beta38"
+    inferno "1.0.0-beta39"
     mobx "*"
 
-inferno@1.0.0-beta38:
-  version "1.0.0-beta38"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.0.0-beta38.tgz#1391d12e104d805bf90d9dfe7ae535a56c4d824d"
+inferno@1.0.0-beta39:
+  version "1.0.0-beta39"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.0.0-beta39.tgz#778cc272d1555f3d0bacbe4c026bf14cdd5e4055"
 
 inflight@^1.0.4:
   version "1.0.6"
