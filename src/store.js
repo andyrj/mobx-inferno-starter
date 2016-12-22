@@ -3,6 +3,7 @@ import { observable } from 'mobx'
 import HttpHash from 'http-hash'
 import { foreach, assign } from 'lodash'
 import { Home, NoMatch } from './views'
+import createElement from 'inferno-create-element'
 
 export const store = observable({
   path: '/',
@@ -26,6 +27,6 @@ export const store = observable({
   get routeChildren() {
     let route = this.router.get(this.path)
     let props = assign({}, route.params, { splat: route.splat })
-    return route.handler(props)
+    return createElement(route.handler, props)
   }
 })
