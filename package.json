@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist && mkdir -p dist/ && cp index.html dist/",
     "predev": "npm run clean",
-    "dev": "webpack-dev-server --content-base dist/ --inline --watch --hot --config build/webpack.client.conf",
+    "dev": "webpack-dev-server --content-base dist/ --inline --hot --config build/webpack.client.conf",
     "build": "npm run clean && npm run build:client-prod && npm run build:prerender-prod",
     "build:dev": "npm run clean && npm run build:client-dev && npm run build:prerender-dev",
     "build:client-prod": "NODE_ENV=production webpack --optimize-minimize --config build/webpack.client.conf.js --progress --hide-modules",
@@ -26,13 +26,15 @@
   "dependencies": {
     "history": "^4.5.0",
     "http-hash": "^2.0.0",
-    "inferno": "1.0.0-beta36",
-    "inferno-component": "beta36",
-    "inferno-create-element": "1.0.0-beta36",
-    "inferno-mobx": "1.0.0-beta36",
+    "inferno": "1.0.0-beta38",
+    "inferno-component": "1.0.0-beta38",
+    "inferno-create-element": "1.0.0-beta38",
+    "inferno-devtools": "1.0.0-beta38",
+    "inferno-mobx": "1.0.0-beta38",
     "lodash": "^4.17.2",
     "material-components-web": "^0.1.1",
-    "mobx": "^2.7.0"
+    "mobx": "^2.7.0",
+    "mobx-remotedev": "^0.2.4"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.0",

@@ -8,7 +8,6 @@ export default connect(['store'], ({ store, children }) => {
     <div id='route'>
       <p>{ store.path }</p>
       <Link path='/'>Home</Link>
-      <br />
       <Link path='/test'>Test</Link>
       { store.routeChildren }
     </div>
