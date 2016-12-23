@@ -7,7 +7,7 @@ import App from './App'
 
 let store
 if (process.env.NODE_ENV !== 'production') {
-  let remotedev = require('mobx-remotedev').default
+  let remotedev = require('mobx-remotedev')
   require('inferno-devtools')
   store = remotedev(baseStore)
 } else {
