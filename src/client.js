@@ -4,10 +4,10 @@ import { store as baseStore } from './store'
 import { reaction } from 'mobx'
 import createHistory from 'history/createBrowserHistory'
 import App from './App'
-import remotedev from 'mobx-remotedev'
 
 let store
 if (process.env.NODE_ENV !== 'production') {
+  let remotedev = require('mobx-remotedev').default
   require('inferno-devtools')
   store = remotedev(baseStore)
 } else {
