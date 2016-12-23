@@ -34,4 +34,6 @@ if (module.hot) {
   module.hot.accept('./App', () => {
     Inferno.render(<App store={ store } />, document.getElementById('root'))
   })
+
+  module.hot.accept()
 }

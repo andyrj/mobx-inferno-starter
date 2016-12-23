@@ -24,6 +24,7 @@
   "author": "Andy Johnson",
   "license": "MIT",
   "dependencies": {
+    "@material/drawer": "^0.1.0",
     "history": "^4.5.0",
     "http-hash": "^2.0.0",
     "inferno": "1.0.0-beta42",
