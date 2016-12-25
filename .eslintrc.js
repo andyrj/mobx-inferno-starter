@@ -22,6 +22,7 @@ module.exports = {
       "strict": 0,
       "eqeqeq": [2, "smart"],
       "no-unused-vars": 0,
+	  "max-len": ["error", 80],
       "space-before-function-paren": 0,
       "inferno/display-name": 0,
       "inferno/require-optimization": 0,
