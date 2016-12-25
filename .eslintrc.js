@@ -24,6 +24,7 @@ module.exports = {
       "no-unused-vars": 0,
       "space-before-function-paren": 0,
       "inferno/display-name": 0,
-      "inferno/require-optimization": 0
+      "inferno/require-optimization": 0,
+      "inferno/prop-types": 0
     }
 };

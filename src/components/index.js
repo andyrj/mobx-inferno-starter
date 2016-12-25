@@ -5,8 +5,8 @@ import Navigation from './Navigation'
 import Menu from './Menu'
 
 module.exports = {
-  Link,
-  Router,
-  Navigation,
-  Menu
+	Link,
+	Router,
+	Navigation,
+	Menu
 }

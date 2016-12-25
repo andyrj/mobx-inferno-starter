@@ -7,33 +7,33 @@ import App from './App'
 
 let store
 if (process.env.NODE_ENV !== 'production') {
-  let remotedev = require('mobx-remotedev')
-  // require('inferno-devtools')
-  store = remotedev(baseStore)
+	let remotedev = require('mobx-remotedev')
+	// require('inferno-devtools')
+	store = remotedev(baseStore)
 } else {
-  store = baseStore
+	store = baseStore
 }
 
 const history = createHistory()
 
 const unlisten = history.listen((location, action) => {
-  if (store.path !== location.pathname) {
-    store.path = location.pathname
-  }
+	if (store.path !== location.pathname) {
+		store.path = location.pathname
+	}
 })
 
 const routing = reaction(() => store.path, (path) => {
-  if (history.location.pathname !== path) {
-    history.push(path, {})
-  }
+	if (history.location.pathname !== path) {
+		history.push(path, {})
+	}
 })
 
 Inferno.render(<App store={store} />, document.getElementById('root'))
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    Inferno.render(<App store={store} />, document.getElementById('root'))
-  })
+	module.hot.accept('./App', () => {
+		Inferno.render(<App store={store} />, document.getElementById('root'))
+	})
 
-  module.hot.accept()
+	module.hot.accept()
 }
