@@ -6,7 +6,7 @@ import {
 	MDCTemporaryDrawerFoundation
 } from '@material/drawer'
 
-// pull in drawer css
+// pull in material-components-web/drawer css
 require('../../node_modules/@material/drawer/dist/mdc.drawer.css')
 
 //export default () => {

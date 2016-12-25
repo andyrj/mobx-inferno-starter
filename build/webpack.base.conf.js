@@ -16,6 +16,7 @@ module.exports = {
 		'http-hash',
 		'inferno',
 		'inferno-component',
+		'inferno-create-class',
 		'inferno-create-element',
 		'inferno-mobx',
 		'mobx'
@@ -36,7 +37,10 @@ module.exports = {
 			{
 				test: /\.(jsx|js)$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/
+				exclude: '/node_modules\/(?![' +
+					'material-components-web|' +
+					'@material/drawer' +
+					'])/'
 			}
 		]
 	}

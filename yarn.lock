@@ -194,13 +194,9 @@ acorn-jsx@^3.0.0, acorn-jsx@^3.0.1:
   dependencies:
     acorn "^3.0.4"
 
-acorn@2.6.4:
+acorn@2.6.4, acorn@^2.1.0, acorn@^2.4.0:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-2.6.4.tgz#eb1f45b4a43fa31d03701a5ec46f3b52673e90ee"
-
-acorn@^2.1.0, acorn@^2.4.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-2.7.0.tgz#ab6e7d9d886aaca8b085bc3312b79a198433f0e7"
 
 acorn@^3.0.4:
   version "3.3.0"
@@ -2653,11 +2649,18 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-inferno-component@^0.7.27:
-  version "0.7.27"
-  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-0.7.27.tgz#9838675e8489cae0c0a7cf1d5815571b29f6e1fa"
+inferno-component@1.0.0-beta42:
+  version "1.0.0-beta42"
+  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.0.0-beta42.tgz#cc91e1ee4074af697e3c00ad4668dbaf2fc7e7f9"
   dependencies:
-    inferno "^0.7.27"
+    inferno "1.0.0-beta42"
+    inferno-component "1.0.0-beta42"
+
+inferno-create-class@1.0.0-beta42:
+  version "1.0.0-beta42"
+  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-1.0.0-beta42.tgz#bed47ebb51e6bc0a9086d42550e53ff1bc7094a0"
+  dependencies:
+    inferno "1.0.0-beta42"
 
 inferno-create-element@1.0.0-beta42:
   version "1.0.0-beta42"
@@ -2681,10 +2684,6 @@ inferno-mobx@1.0.0-beta42:
 inferno@1.0.0-beta42:
   version "1.0.0-beta42"
   resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.0.0-beta42.tgz#27695444c1c5f19fb961a52467b52f3a7aff0382"
-
-inferno@^0.7.27:
-  version "0.7.27"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-0.7.27.tgz#3c3b04f85a072cb8e7165ba5c327252f8c15d5bb"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -4757,11 +4756,11 @@ strip-indent@^1.0.0:
   dependencies:
     get-stdin "^4.0.1"
 
-strip-json-comments@1.0.2:
+strip-json-comments@1.0.2, strip-json-comments@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-1.0.2.tgz#5a48ab96023dbac1b7b8d0ffabf6f63f1677be9f"
 
-strip-json-comments@~1.0.1, strip-json-comments@~1.0.4:
+strip-json-comments@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-1.0.4.tgz#1e15fbcac97d3ee99bf2d73b4c656b082bbafb91"
 
