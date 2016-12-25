@@ -1,7 +1,10 @@
 import Inferno from 'inferno'
 import Component from 'inferno-component'
 import Navigation from './Navigation'
-import {MDCTemporaryDrawer, MDCTemporaryDrawerFoundation} from '@material/drawer'
+import {
+	MDCTemporaryDrawer, 
+	MDCTemporaryDrawerFoundation
+} from '@material/drawer'
 
 // pull in drawer css
 require('../../node_modules/@material/drawer/dist/mdc.drawer.css')
@@ -16,7 +19,9 @@ export default class Menu extends Component {
 	}
 	render() {
 	return (
-    <aside className="mdc-temporary-drawer mdc-typography" id="drawer">
+    <aside className="mdc-temporary-drawer mdc-typography" 
+        id="drawer"
+    >
         <nav className="mdc-temporary-drawer__drawer">
             <header className="mdc-temporary-drawer__header">
                 <div className="mdc-temporary-drawer__header-content">
