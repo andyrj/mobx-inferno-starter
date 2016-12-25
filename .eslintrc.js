@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "standard",
+    "extends": ["standard", "eslint:recommended", "plugin:inferno/all"],
     "plugins": [
         "standard",
         "promise",
@@ -22,6 +22,8 @@ module.exports = {
       "strict": 0,
       "eqeqeq": [2, "smart"],
       "no-unused-vars": 0,
-      "space-before-function-paren": 0
+      "space-before-function-paren": 0,
+      "inferno/display-name": 0,
+      "inferno/require-optimization": 0
     }
 };

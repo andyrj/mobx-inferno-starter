@@ -4,6 +4,6 @@ import { connect } from 'inferno-mobx'
 
 export default ({ store }) => {
   return (
-    'test'
+      <div>{ 'test' }</div>
   )
 }

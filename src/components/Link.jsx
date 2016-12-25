@@ -9,8 +9,10 @@ const changeRoute = (props, event) => {
 
 export default ({ path, children }) => {
   return (
-  <a href={ path } onClick={ linkEvent({ path }, changeRoute) } >
-    { children }
-  </a>
+      <a href={path} 
+          onClick={linkEvent({ path }, changeRoute)}
+      >
+          { children }
+      </a>
   )
 }

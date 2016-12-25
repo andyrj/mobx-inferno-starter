@@ -7,8 +7,8 @@ require('../node_modules/material-components-web/dist/material-components-web.cs
 
 export default ({ store }) => {
   return (
-    <Provider store={ store } >
-      <Router />
-    </Provider>
+      <Provider store={store} >
+          <Router />
+      </Provider>
   )
 }
