@@ -28,11 +28,14 @@ const routing = reaction(() => store.path, (path) => {
 	}
 })
 
-Inferno.render(<App store={store} />, document.getElementById('root'))
+const renderApp = () => {
+	Inferno.render(<App store={store} />, document.getElementById('root'))
+}
+renderApp()
 
 if (module.hot) {
 	module.hot.accept('./App', () => {
-		Inferno.render(<App store={store} />, document.getElementById('root'))
+		renderApp()
 	})
 
 	module.hot.accept()
