@@ -28,9 +28,7 @@ module.exports = {
 		'[name].[chunkhash].js' : '[name].js'
 	},
 	resolve: {
-		extensions: ['', '.jsx', '.js'],
-		enforceExtension: false,
-		enforceModuleExtension: false
+		extensions: ['.jsx', '.js']
 	},
 	plugins: [assetsPluginInstance],
 	module: {

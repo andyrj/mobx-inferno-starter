@@ -5,7 +5,6 @@ var Purify = require('purifycss-webpack-plugin')
 // const WebpackShellPlugin = require('webpack-shell-plugin')
 
 const config = Object.assign({}, base, {
-	resolve: {},
 	plugins: (base.plugins || []).concat([
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': 
