@@ -18,7 +18,7 @@
     "test:dev": "webpack-dev-server --hot --inline --content-base test/ --config build/webpack.test.conf.js",
     "test:cov": "npm run build:nodeTest && isparta cover --no-default-excludes -x '**/node_modules/**' -x '**/test/helper.js' _mocha -- --recursive",
     "test:codacy": "npm run build:nodeTest && isparta cover --no-default-excludes --report=text  -x '**/node_modules/**' -x '**/test/helper.js' _mocha --report lcovonly -- | cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage",
-    "lint": "eslint --ext .js,.jsx src test/units",
+    "lint": "eslint --ext .js,.jsx src test/units && jsinspect -t 15 ./src ./src/** ./src/**/**",
     "lint:fix": "eslint --fix --ext .js,.jsx src test/units"
   },
   "author": "Andy Johnson",
@@ -32,6 +32,7 @@
     "inferno-create-element": "1.0.0-beta42",
     "inferno-devtools": "1.0.0-beta42",
     "inferno-mobx": "1.0.0-beta42",
+    "jsinspect": "^0.8.0",
     "lodash": "^4.17.2",
     "material-components-web": "^0.1.1",
     "mobx": "^2.7.0",
