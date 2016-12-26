@@ -12,7 +12,11 @@ const changeRoute = (path, event) => {
 
 export default function ({path, classes, children}) {
   return (
-    <a classNames={classes} href={path} onClick={linkEvent(path, changeRoute)}>
+    <a
+      classNames={classes ? classes : ''}
+      href={path}
+      onClick={linkEvent(path, changeRoute)}
+      >
       {children}
     </a>
   );

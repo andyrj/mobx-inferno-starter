@@ -4,6 +4,6 @@ import { connect } from 'inferno-mobx';
 
 export default function MenuAnchor({ store }) {
   return (
-    <div>{'test'}</div>
+    <div />
   );
 }
