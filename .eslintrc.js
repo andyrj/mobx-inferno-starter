@@ -42,6 +42,7 @@ module.exports = {
     "inferno/jsx-indent": 0,
     "inferno/jsx-max-props-per-line": 0,
     "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "react/require-render-return": 2
   }
 };
