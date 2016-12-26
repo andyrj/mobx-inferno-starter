@@ -5,7 +5,6 @@ import { reaction } from 'mobx';
 import App from './App';
 import storage from './store';
 
-
 let store;
 if (process.env.NODE_ENV !== 'production') {
   let remotedev = require('mobx-remotedev');
@@ -30,7 +29,7 @@ const routing = reaction(() => store.path, (path) => {
 });
 
 const renderApp = () => {
-  Inferno.render(<App store={store} />, document.getElementById('root')); 
+  Inferno.render(<App store={store} />, document.getElementById('root'));
 };
 renderApp();
 
