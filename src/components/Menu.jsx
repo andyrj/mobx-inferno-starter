@@ -12,9 +12,7 @@ require('../../node_modules/@material/drawer/dist/mdc.drawer.css');
 //export default () => {
 export default class Menu extends Component {
   ComponentDidMount() {
-    /* eslint-disable */
-    this.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'))
-    /* eslint-enable */
+    this.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'));
   }
   ComponentWillUnmount() {
     this.menu.destroy();

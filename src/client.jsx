@@ -30,9 +30,7 @@ const routing = reaction(() => store.path, (path) => {
 });
 
 const renderApp = () => {
-  /* eslint-disable */
   Inferno.render(<App store={store} />, document.getElementById('root')); 
-  /* eslint-enable */
 };
 renderApp();
 
