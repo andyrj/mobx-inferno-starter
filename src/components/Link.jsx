@@ -1,15 +1,18 @@
 'use strict';
 import Inferno, { linkEvent } from 'inferno';
+import { action } from 'mobx';
 import store from '../store';
 
-const changeRoute = (props, event) => {
+const changeRoute = (path, event) => {
   event.preventDefault();
-  store.path = props.path;
+  action('changeRoute', () => {
+    store.path = path;
+  });
 };
 
-export default function({ path, children }) {
+export default function ({path, classes, children}) {
   return (
-    <a href={path} onClick={linkEvent({ path }, changeRoute)}>
+    <a classNames={classes} href={path} onClick={linkEvent(path, changeRoute)}>
       {children}
     </a>
   );

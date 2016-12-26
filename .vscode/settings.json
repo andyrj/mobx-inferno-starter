@@ -2,5 +2,7 @@
   "eslint.enable": true,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "editor.wrappingIndent": "indent"
+  "editor.wrappingIndent": "same",
+  "javascript.validate.enable": false,
+  "eslint.autoFixOnSave": true
 }

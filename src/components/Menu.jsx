@@ -1,4 +1,5 @@
 import Inferno from 'inferno';
+import { connect, reaction } from 'inferno-mobx';
 import Component from 'inferno-component';
 import {
   MDCTemporaryDrawer,
@@ -9,13 +10,22 @@ import Navigation from './Navigation';
 // pull in material-components-web/drawer css
 require('../../node_modules/@material/drawer/dist/mdc.drawer.css');
 
-//export default () => {
+@connect(['store'])
 export default class Menu extends Component {
+  Constructor() {
+    let menuToggle = reaction('menuToggle', () => {
+      store.displayMenu;
+    }, (display) => {
+      this.menu.open = display;
+    }, false);
+  }
   ComponentDidMount() {
     this.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'));
   }
   ComponentWillUnmount() {
-    this.menu.destroy();
+    this
+      .menu
+      .destroy();
   }
   render() {
     return (
@@ -26,7 +36,7 @@ export default class Menu extends Component {
               {'Inferno-Mobx-Starter'}
             </div>
           </header>
-          <navigation />
+          <Navigation />
         </nav>
       </aside>
     );
