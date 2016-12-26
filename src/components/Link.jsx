@@ -13,4 +13,4 @@ export default function({ path, children }) {
       {children}
     </a>
   );
-};
+}

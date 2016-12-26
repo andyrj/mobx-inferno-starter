@@ -6,4 +6,4 @@ export default function MenuAnchor({ store }) {
   return (
     <div>{'test'}</div>
   );
-};
+}

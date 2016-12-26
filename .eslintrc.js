@@ -19,12 +19,18 @@ module.exports = {
       "modules": true
     }
   },
+  "globals": {
+    "window": true,
+    "document": true,
+    "fetch": true
+  },
   "rules": {
     "strict": 0,
     "semi": 2,
     "no-extra-semi": 2,
     "eqeqeq": [2, "smart"],
     "no-unused-vars": 0,
+    "consistent-return": 0, 
     "max-len": ["error", 80],
     "space-before-function-paren": 0,
     "max-statements": [2, 16],

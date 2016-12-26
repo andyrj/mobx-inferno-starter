@@ -13,4 +13,4 @@ export default function App({ store }) {
       <Router />
     </Provider>
   );
-};
+}

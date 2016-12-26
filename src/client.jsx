@@ -9,7 +9,7 @@ import storage from './store';
 let store;
 if (process.env.NODE_ENV !== 'production') {
   let remotedev = require('mobx-remotedev');
-  require('inferno-devtools')
+  require('inferno-devtools');
   store = remotedev(storage);
 } else {
   store = storage;
