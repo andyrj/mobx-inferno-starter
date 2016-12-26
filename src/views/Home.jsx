@@ -4,9 +4,7 @@ import { connect } from 'inferno-mobx'
 import { Link } from '../components'
 
 export default connect(['store'], ({ store }) => {
-	return (
-    <div>
-        <p>{ 'Home' }</p>
-    </div>
-  )
+  <div>
+    <p>{'Home'}</p>
+  </div>
 })
