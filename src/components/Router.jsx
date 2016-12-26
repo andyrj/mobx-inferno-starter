@@ -4,7 +4,7 @@ import { connect } from 'inferno-mobx';
 import MenuAnchor from './MenuAnchor';
 import Menu, { mounted, unmounted } from './Menu';
 
-export default connect(['store'], ({ store }) => {
+export default connect(['store'], function Router({ store }) {
   return (
     <div id='route'>
       <MenuAnchor />

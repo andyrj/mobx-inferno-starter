@@ -7,7 +7,7 @@ require(
   '../node_modules/material-components-web/dist/material-components-web.css'
 );
 
-export default ({ store }) => {
+export default function App({ store }) {
   return (
     <Provider store={store} >
       <Router />

@@ -7,7 +7,7 @@ const NAV_C='mdc-temporary-drawer__content mdc-list';
 const A_C='mdc-list-item mdc-temporary-drawer--selected';
 const I_C='material-icons mdc-list-item__start-detail';
 
-export default connect(['store'], ({ store }) => {
+export default connect(['store'], function Navigation({ store }) {
   return (
     <nav className="{NAV_C}" id="icon-with-text-demo">
       <a className="{A_C}" href="#">

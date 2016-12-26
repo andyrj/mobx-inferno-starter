@@ -3,7 +3,7 @@ import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
 import { Link } from '../components';
 
-export default connect(['store'], ({ store }) => {
+export default connect(['store'], function NoMatch({ store }) {
   return (
     <div>
       <h1>{'Error: 404'}</h1>
