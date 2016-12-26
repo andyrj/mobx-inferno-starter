@@ -8,7 +8,9 @@ require(
 );
 
 export default ({ store }) => {
-  <Provider store={store} >
-    <Router />
-  </Provider>;
+  return (
+    <Provider store={store} >
+      <Router />
+    </Provider>
+  );
 };

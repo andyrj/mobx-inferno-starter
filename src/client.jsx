@@ -3,16 +3,16 @@ import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
 import { reaction } from 'mobx';
 import App from './App';
-import baseStore from './store';
+import storage from './store';
 
 
 let store;
 if (process.env.NODE_ENV !== 'production') {
   let remotedev = require('mobx-remotedev');
   // require('inferno-devtools')
-  store = remotedev(baseStore);
+  store = remotedev(storage);
 } else {
-  store = baseStore;
+  store = storage;
 }
 
 const history = createHistory();

@@ -8,11 +8,13 @@ const A_C='mdc-list-item mdc-temporary-drawer--selected';
 const I_C='material-icons mdc-list-item__start-detail';
 
 export default connect(['store'], ({ store }) => {
-  <nav className="{NAV_C}" id="icon-with-text-demo">
-    <a className="{A_C}" href="#">
-      <i aria-hidden="true" className="{I_C}">
-        {'Home'}
-      </i> {'Home'}
-    </a>
-  </nav>;
+  return (
+    <nav className="{NAV_C}" id="icon-with-text-demo">
+      <a className="{A_C}" href="#">
+        <i aria-hidden="true" className="{I_C}">
+          {'Home'}
+        </i> {'Home'}
+      </a>
+    </nav>
+  );
 });
