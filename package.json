@@ -1,7 +1,7 @@
 {
-  "name": "inferno-mobx-starter",
+  "name": "mobx-inferno-starter",
   "version": "1.0.0",
-  "description": "Inferno Mobx Starter Project",
+  "description": "*WIP* Inferno Mobx Starter Project",
   "main": "src/client.js",
   "scripts": {
     "clean": "rm -rf dist && mkdir -p dist/ && cp index.html dist/",
