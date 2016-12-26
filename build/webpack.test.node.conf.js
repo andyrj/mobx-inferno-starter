@@ -26,7 +26,7 @@ var testConfig = {
           noAutoWrap: true,
           babel: {
             presets: [
-              ['es2015', { 'modules': false }],
+              'es2015',
               'stage-0'
             ]
           }

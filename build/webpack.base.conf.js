@@ -20,7 +20,8 @@ module.exports = {
       'inferno-create-class',
       'inferno-create-element',
       'inferno-mobx',
-      'mobx'
+      'mobx',
+      '@material/drawer'
     ]
   },
   output: {

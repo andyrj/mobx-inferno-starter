@@ -1,6 +1,6 @@
 'use strict';
 import Inferno, { linkEvent } from 'inferno';
-import { store } from '../store';
+import store from '../store';
 
 const changeRoute = (props, event) => {
   event.preventDefault();

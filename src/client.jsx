@@ -3,7 +3,7 @@ import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
 import { reaction } from 'mobx';
 import App from './App';
-import { store as baseStore } from './store';
+import baseStore from './store';
 
 
 let store;
