@@ -1,13 +1,13 @@
-import Inferno from 'inferno'
-import Component from 'inferno-component'
+import Inferno from 'inferno';
+import Component from 'inferno-component';
 import {
   MDCTemporaryDrawer,
   MDCTemporaryDrawerFoundation
-} from '@material/drawer'
-import Navigation from './Navigation'
+} from '@material/drawer';
+import Navigation from './Navigation';
 
 // pull in material-components-web/drawer css
-require('../../node_modules/@material/drawer/dist/mdc.drawer.css')
+require('../../node_modules/@material/drawer/dist/mdc.drawer.css');
 
 //export default () => {
 export default class Menu extends Component {
@@ -17,7 +17,7 @@ export default class Menu extends Component {
     /* eslint-enable */
   }
   ComponentWillUnmount() {
-    this.menu.destroy()
+    this.menu.destroy();
   }
   render() {
     return (
@@ -31,6 +31,6 @@ export default class Menu extends Component {
           <navigation />
         </nav>
       </aside>
-    )
+    );
   }
 }

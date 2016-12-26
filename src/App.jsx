@@ -1,14 +1,14 @@
-'use strict'
-import Inferno from 'inferno'
-import { Provider } from 'inferno-mobx'
-import { Router, Link } from './components'
+'use strict';
+import Inferno from 'inferno';
+import { Provider } from 'inferno-mobx';
+import { Router, Link } from './components';
 
 require(
   '../node_modules/material-components-web/dist/material-components-web.css'
-)
+);
 
 export default ({ store }) => {
   <Provider store={store} >
     <Router />
-  </Provider>
-}
+  </Provider>;
+};
