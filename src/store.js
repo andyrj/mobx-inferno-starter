@@ -7,9 +7,8 @@ import { Home, Counters, NoMatch } from './views';
 
 class Store {
   @observable path = '/';
-  @observable displayMenu = false;
   @observable counters = [];
-  
+
   @observable routes = [
     {
       path: '/',
@@ -55,14 +54,6 @@ class Store {
       return this.navLinkFilter.indexOf(route.path) > -1;
     });
   }
-
-/*
-  @action showMenu({s, isVisible}){
-    debugger;
-    console.log('toggling menu!');
-    s.displayMenu = isVisible;
-  }
-  */
 }
 
 const store = new Store();

@@ -3,14 +3,12 @@ import Inferno, { linkEvent } from 'inferno';
 import { action } from 'mobx';
 import store from '../store';
 
-const changeRoute = (path, event) => {
+const changeRoute = action('changeRoute', (path, event) => {
   event.preventDefault();
-  action('changeRoute', () => {
-    store.path = path;
-  });
-};
+  store.path = path;
+});
 
-export default function ({path, classes, children}) {
+export default function RouterLink({path, classes, children}) {
   return (
     <a
       classNames={classes ? classes : ''}

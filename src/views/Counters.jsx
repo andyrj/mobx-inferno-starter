@@ -2,31 +2,29 @@
 import Inferno, { linkEvent } from 'inferno';
 import { connect } from 'inferno-mobx';
 import { action } from 'mobx';
-import { shortid } from 'shortid';
+import shortid from 'shortid';
 
-const increment = ({cid, store}) => {
-  action('incrementCounter', () => {
-    store.counters[cid] += 1;
-  });
-};
+const increment = action('increment', ({cid, store}) => {
+  store.counters.filter((counter) => {
+    return counter.id === cid;
+  })[0].count += 1;
+});
 
-const decrement = ({cid, store}) => {
-  action('decrementCounter', () => {
-    store.counters[cid] -= 1;
-  });
-};
+const decrement = action('decrement', ({cid, store}) => {
+  store.counters.filter((counter) => {
+    return counter.id === cid;
+  })[0].count -= 1;
+});
 
-const deleteCounter = ({cid, store}) => {
-  action('deleteCounter', () => {
-    store.counters.splice(cid, 1);
-  });
-};
+const deleteCounter = action('deleteCounter', ({cid, store}) => {
+  store.counters.remove(store.counters.filter((counter) => {
+    return counter.id === cid;
+  })[0]);
+});
 
-const addCounter = ({store}) => {
-  action('addCounter', () => {
-    store.counters.push({id:shortid.generate(), count: 0});
-  });
-};
+const addCounter = action('addCounter', ({store}) => {
+  store.counters.push({id:shortid.generate(), count: 0});
+});
 
 export default connect(['store'], function Counters({store}) {
   let counters = store.counters.map((c) => {

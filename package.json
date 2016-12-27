@@ -37,6 +37,7 @@
     "lodash": "^4.17.2",
     "material-components-web": "^0.1.1",
     "mobx": "^2.7.0",
+    "mobx-logger": "^0.3.1",
     "mobx-remotedev": "^0.2.4",
     "shortid": "^2.2.6"
   },

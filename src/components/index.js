@@ -1,11 +1,11 @@
 'use strict';
-import Link from './Link';
+import RouterLink from './RouterLink';
 import Router from './Router';
 import Navigation from './Navigation';
 import Menu from './Menu';
 
 module.exports = {
-  Link,
+  RouterLink,
   Router,
   Navigation,
   Menu

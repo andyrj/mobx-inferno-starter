@@ -1,14 +1,24 @@
 'use strict';
 import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
-import { reaction } from 'mobx';
+import { reaction, useStrict } from 'mobx';
 import App from './App';
 import storage from './store';
 
+const DEV = process.env.NODE_ENV !== 'production';
+
 let store;
-if (process.env.NODE_ENV !== 'production') {
+if (DEV) {
   let remotedev = require('mobx-remotedev');
+  let enableLogging = require('mobx-logger').enableLogging;
   require('inferno-devtools');
+  useStrict(true);
+  enableLogging({predicate: () => true,
+    action: true,
+    reaction: true,
+    transaction: true,
+    compute: true
+  });
   store = remotedev(storage);
 } else {
   store = storage;
