@@ -1,14 +1,16 @@
 'use strict';
 import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';
-import { observable } from 'mobx';
+import { observable, computed, action } from 'mobx';
 import { foreach, assign, filter } from 'lodash';
 import { Home, Counters, NoMatch } from './views';
 
-const store = observable({
-  path: '/',
-  displayMenu: false,
-  routes: [
+class Store {
+  @observable path = '/';
+  @observable displayMenu = false;
+  @observable counters = [];
+  
+  @observable routes = [
     {
       path: '/',
       text: 'Home',
@@ -27,28 +29,41 @@ const store = observable({
       icon: 'error_outline',
       component: NoMatch
     }
-  ],
-  navLinkFilter: [
+  ]
+
+  @observable navLinkFilter = [
     '/',
     '/counters'
-  ],
-  get router() {
+  ]
+
+  @computed get router() {
     let _router = HttpHash();
     foreach(store.routes, (route) => {
       _router.set(route.path, route.component);
     });
     return _router;
-  },
-  get routeChildren() {
+  }
+
+  @computed get routeChildren() {
     let route = this.router.get(this.path);
     let props = assign({}, route.params, { splat: route.splat });
     return createElement(route.handler, props);
-  },
-  get navLinks() {
+  }
+
+  @computed get navLinks() {
     return filter(this.routes, (route) => {
       return this.navLinkFilter.indexOf(route.path) > -1;
     });
   }
-});
 
+/*
+  @action showMenu({s, isVisible}){
+    debugger;
+    console.log('toggling menu!');
+    s.displayMenu = isVisible;
+  }
+  */
+}
+
+const store = new Store();
 export default store;

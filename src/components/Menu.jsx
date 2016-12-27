@@ -12,20 +12,18 @@ require('../../node_modules/@material/drawer/dist/mdc.drawer.css');
 
 @connect(['store'])
 export default class Menu extends Component {
-  Constructor() {
-    let menuToggle = reaction('menuToggle', () => {
-      store.displayMenu;
+  ComponentDidMount() {
+    debugger;
+    this.menuToggle = reaction('menuToggle', () => {
+      return store.displayMenu;
     }, (display) => {
       this.menu.open = display;
     }, false);
-  }
-  ComponentDidMount() {
     this.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'));
   }
   ComponentWillUnmount() {
-    this
-      .menu
-      .destroy();
+    this.menuToggle();
+    this.menu.destroy();
   }
   render() {
     return (
