@@ -10,7 +10,7 @@ const I_C = ['material-icons', 'mdc-list-item__start-detail'];
 export default connect(['store'], function Navigation({ store }) {
   let links = store.navLinks.map((link) => {
     return (
-      <RouterLink classes={A_C.join(' ')} key={link.path} path={link.path}>
+      <RouterLink path={link.path}>
         {link.text}
       </RouterLink>);
   });
