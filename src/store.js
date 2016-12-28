@@ -3,11 +3,34 @@ import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';
 import { observable, computed, action } from 'mobx';
 import { foreach, assign, filter } from 'lodash';
+import shortid from 'shortid';
 import { Home, Counters, NoMatch } from './views';
 
 class Store {
   @observable path = '/';
   @observable counters = [];
+
+  @action increment(cid) {
+    this.counters.filter((counter) => {
+      return counter.id === cid;
+    })[0].count += 1;
+  }
+
+  @action decrement(cid) {
+    this.counters.filter((counter) => {
+      return counter.id === cid;
+    })[0].count -= 1;
+  }
+  
+  @action deleteCounter(cid) {
+    this.counters.remove(this.counters.filter((counter) => {
+      return counter.id === cid;
+    })[0]);
+  }
+
+  @action addCounter() {
+    this.counters.push({id:shortid.generate(), count: 0});
+  }
 
   @observable routes = [
     {

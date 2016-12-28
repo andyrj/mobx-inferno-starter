@@ -1,7 +1,7 @@
 'use strict';
 import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
-import { reaction, useStrict } from 'mobx';
+import { action, reaction, useStrict } from 'mobx';
 import App from './App';
 import storage from './store';
 
@@ -26,9 +26,13 @@ if (DEV) {
 
 const history = createHistory();
 
-const unlisten = history.listen((location, action) => {
+const pathUpdate = action('updatePath', (store) => {
+  store.path = location.pathname;
+})
+
+const unlisten = history.listen((location, hAction) => {
   if (store.path !== location.pathname) {
-    store.path = location.pathname;
+    pathUpdate(store);
   }
 });
 
