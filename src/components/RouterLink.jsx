@@ -10,11 +10,12 @@ const changeRoute = action('changeRoute', (path, event) => {
 });
 
 export default function RouterLink({path, classes, children}) {
+  // Bug is on line 18 here, change this code to onclick instead of onClick and it works fine...
   return (
     <a
       classNames={classes ? classes : ''}
       href={path}
-      onclick={(event) => {debugger; changeRoute(path, event)}}
+      onClick={(event) => {debugger; changeRoute(path, event)}}
       >
       {children}
     </a>
