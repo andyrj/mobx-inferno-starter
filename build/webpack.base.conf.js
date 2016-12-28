@@ -16,6 +16,8 @@ module.exports = {
       'history',
       'http-hash',
       'inferno',
+      'inferno-component',
+      'inferno-create-class',
       'inferno-create-element',
       'inferno-mobx',
       'mobx',
