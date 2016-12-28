@@ -1,15 +1,12 @@
 'use strict';
 import Inferno from 'inferno';
 
-const I_C = ['material-icons', 'mdc-list-item__start-detail'];
+const I_C = ['mi', 'mi-apps'];
 
 export default function MenuAnchor({ toggleMenu }) {
   return (
-    <div id='menuAnchor'>
-      <button
-        onClick={toggleMenu}>
-        <i className={I_C.join(' ')}>{'menu'}</i>
-      </button>
-    </div>
+    <button id='menuAnchor' onClick={toggleMenu}>
+      <i className={I_C.join(' ')}></i>
+    </button>
   );
 };

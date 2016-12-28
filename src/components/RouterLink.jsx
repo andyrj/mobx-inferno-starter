@@ -4,7 +4,6 @@ import { action } from 'mobx';
 import store from '../store';
 
 const changeRoute = action('changeRoute', (path, event) => {
-  debugger;
   event.preventDefault();
   store.path = path;
 });
@@ -14,7 +13,7 @@ export default function RouterLink({path, classes, children}) {
     <a
       classNames={classes ? classes : ''}
       href={path}
-      onclick={(event) => {debugger; changeRoute(path, event)}}
+      onclick={(event) => {changeRoute(path, event)}}
       >
       {children}
     </a>

@@ -11,6 +11,7 @@ export default connect(['store'], function Navigation({ store }) {
   let links = store.navLinks.map((link) => {
     return (
       <RouterLink classes={A_C.join(' ')} key={link.path} path={link.path}>
+        <i className={link.icon}></i>
         {link.text}
       </RouterLink>);
   });

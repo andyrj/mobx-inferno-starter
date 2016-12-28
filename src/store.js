@@ -13,13 +13,13 @@ class Store {
     {
       path: '/',
       text: 'Home',
-      icon: 'home',
+      icon: 'mi mi-home',
       component: Home
     },
     {
       path: '/counters',
       text: 'Counters',
-      icon: 'account_balance_wallet',
+      icon: 'mi mi-account-balance-wallet',
       component: Counters
     },
     {
