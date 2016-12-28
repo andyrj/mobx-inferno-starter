@@ -2,7 +2,6 @@
 import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';
 import { observable, computed, action } from 'mobx';
-import { foreach, assign, filter } from 'lodash';
 import shortid from 'shortid';
 import * as views from './views';
 
@@ -63,7 +62,7 @@ class Router {
 
   @computed get router() {
     let _router = HttpHash();
-    foreach(this.routes, (route) => {
+    this.routes.foreach((route) => {
       _router.set(route.path, route.component);
     });
     return _router;
@@ -71,12 +70,12 @@ class Router {
 
   @computed get routeChildren() {
     let route = this.router.get(this.path);
-    let props = assign({}, route.params, { splat: route.splat });
+    let props = Object.assign({}, route.params, { splat: route.splat });
     return createElement(route.handler, props);
   }
 
   @computed get navLinks() {
-    return filter(this.routes, (route) => {
+    return this.routes.filter((route) => {
       return this.navLinkFilter.indexOf(route.path) > -1;
     });
   }
