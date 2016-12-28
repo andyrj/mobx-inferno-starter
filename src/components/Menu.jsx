@@ -11,7 +11,7 @@ import Navigation from './Navigation';
 require('../../node_modules/@material/drawer/dist/mdc.drawer.css');
 
 let menu;
-const toggleMenu = () => {
+export const openMenu = () => {
   if (menu) {
     menu.open = true;
   } else {
@@ -20,10 +20,16 @@ const toggleMenu = () => {
   }
 };
 
+export const closeMenu = () => {
+  if (menu) {
+    menu.open = false;
+  }
+};
+
 export default () => {
   return (
     <div>
-      <MenuAnchor toggleMenu={ toggleMenu }/>
+      <MenuAnchor openMenu={ openMenu }/>
       <aside className="mdc-temporary-drawer mdc-typography" id="drawer">
         <nav className="mdc-temporary-drawer__drawer">
           <header className="mdc-temporary-drawer__header">

@@ -4,52 +4,55 @@ import createElement from 'inferno-create-element';
 import { observable, computed, action } from 'mobx';
 import { foreach, assign, filter } from 'lodash';
 import shortid from 'shortid';
-import { Home, Counters, NoMatch } from './views';
+import * as views from './views';
 
-class Store {
-  @observable path = '/';
-  @observable counters = [];
+class Counters {
+  @observable values = [];
 
   @action increment(cid) {
-    this.counters.filter((counter) => {
+    this.values.filter((counter) => {
       return counter.id === cid;
     })[0].count += 1;
   }
 
   @action decrement(cid) {
-    this.counters.filter((counter) => {
+    this.values.filter((counter) => {
       return counter.id === cid;
     })[0].count -= 1;
   }
   
   @action deleteCounter(cid) {
-    this.counters.remove(this.counters.filter((counter) => {
+    this.values.remove(this.values.filter((counter) => {
       return counter.id === cid;
     })[0]);
   }
 
   @action addCounter() {
-    this.counters.push({id:shortid.generate(), count: 0});
+    this.values.push({id:shortid.generate(), count: 0});
   }
+}
+
+class Router {
+  @observable path = '/';
 
   @observable routes = [
     {
       path: '/',
       text: 'Home',
       icon: 'mi mi-home',
-      component: Home
+      component: views.Home
     },
     {
       path: '/counters',
       text: 'Counters',
       icon: 'mi mi-account-balance-wallet',
-      component: Counters
+      component: views.Counters
     },
     {
       path: '*',
       text: '404',
       icon: 'error_outline',
-      component: NoMatch
+      component: views.NoMatch
     }
   ]
 
@@ -60,7 +63,7 @@ class Store {
 
   @computed get router() {
     let _router = HttpHash();
-    foreach(store.routes, (route) => {
+    foreach(this.routes, (route) => {
       _router.set(route.path, route.component);
     });
     return _router;
@@ -77,7 +80,17 @@ class Store {
       return this.navLinkFilter.indexOf(route.path) > -1;
     });
   }
+
+  @action changeRoute(path, event) {
+    event.preventDefault();
+    this.path = path;
+  }
 }
 
-const store = new Store();
-export default store;
+const routerStore = new Router();
+const counterStore = new Counters();
+
+module.exports = {
+  routerStore,
+  counterStore
+}

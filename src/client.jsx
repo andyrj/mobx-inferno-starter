@@ -3,11 +3,11 @@ import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
 import { action, reaction, useStrict } from 'mobx';
 import App from './App';
-import storage from './store';
+import { counterStore, routerStore } from './store';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
-let store;
+let stores = {};
 if (DEV) {
   let remotedev = require('mobx-remotedev');
   let enableLogging = require('mobx-logger').enableLogging;
@@ -19,31 +19,39 @@ if (DEV) {
     transaction: true,
     compute: true
   });
-  store = remotedev(storage);
+  stores['router'] = remotedev(routerStore);
+  stores['counters'] = remotedev(counterStore);
 } else {
-  store = storage;
+  store['router'] = routerStore;
+  store['counters'] = counterStore;
 }
 
 const history = createHistory();
 
-const pathUpdate = action('updatePath', (store) => {
-  store.path = location.pathname;
+const pathUpdate = action('updatePath', (routerStore) => {
+  routerStore.path = location.pathname;
 })
 
 const unlisten = history.listen((location, hAction) => {
-  if (store.path !== location.pathname) {
-    pathUpdate(store);
+  if (routerStore.path !== location.pathname) {
+    pathUpdate(routerStore);
   }
 });
 
-const routing = reaction(() => store.path, (path) => {
+const routing = reaction(() => routerStore.path, (path) => {
   if (history.location.pathname !== path) {
     history.push(path, {});
   }
 });
 
 const renderApp = () => {
-  Inferno.render(<App store={store} />, document.getElementById('root'));
+  Inferno.render(
+    <App 
+      counterStore={stores['counters']} 
+      routerStore={stores['router']} 
+    />, 
+      document.getElementById('root')
+  );
 };
 renderApp();
 

@@ -3,18 +3,18 @@ import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
 import { action } from 'mobx';
 
-export default connect(['store'], function Counters({store}) {
-  let counters = store.counters.map((c) => {
+export default connect(['counterStore'], function Counters({counterStore}) {
+  let counters = counterStore.values.map((c) => {
     return (
       <div className='counter' key={c.id}>
-        <button onClick={() => store.deleteCounter(c.id)}>
+        <button onClick={() => counterStore.deleteCounter(c.id)}>
           {'X'}
         </button>
         {c.count}
-        <button onClick={() => store.increment(c.id)}>
+        <button onClick={() => counterStore.increment(c.id)}>
           {'+'}
         </button>
-        <button onClick={() => store.decrement(c.id)}>
+        <button onClick={() => counterStore.decrement(c.id)}>
           {'-'}
         </button>
       </div>
@@ -23,7 +23,7 @@ export default connect(['store'], function Counters({store}) {
 
   return (
     <div className='counters'>
-      <button onClick={() => store.addCounter()}>
+      <button onClick={() => counterStore.addCounter()}>
         {'Add Counter'}
       </button>
       { counters }
