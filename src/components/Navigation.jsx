@@ -18,11 +18,13 @@ export default connect(['routerStore'], function Navigation({ routerStore }) {
     return (
       <RouterLink 
         classes={A_C.join(' ')} 
-        clickHandler={({path, event}) => handleMenuLinkClick({routerStore, path, event})}
+        clickHandler={({path, event}) => 
+          handleMenuLinkClick({routerStore, path, event})
+        }
         key={link.path} 
         path={link.path}
       >
-        <i className={link.icon}></i>
+        <i className={link.icon} />
         {link.text}
       </RouterLink>);
   });

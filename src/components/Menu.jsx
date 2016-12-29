@@ -29,7 +29,7 @@ export const closeMenu = () => {
 export default () => {
   return (
     <div>
-      <MenuAnchor openMenu={ openMenu }/>
+      <MenuAnchor openMenu={openMenu}/>
       <aside className="mdc-temporary-drawer mdc-typography" id="drawer">
         <nav className="mdc-temporary-drawer__drawer">
           <header className="mdc-temporary-drawer__header">

@@ -7,7 +7,10 @@ import Menu, { onDidMount, onWillUnmount } from './Menu';
 export default connect(['routerStore'], function Router({ routerStore }) {
   return (
     <div id='route'>
-      <Menu onComponentDidMount={onDidMount} onComponentWillUnmount={onWillUnmount}/>
+      <Menu 
+        onComponentDidMount={onDidMount} 
+        onComponentWillUnmount={onWillUnmount}
+      />
       <main>
         {routerStore.routeChildren}
       </main>

@@ -65,6 +65,7 @@ module.exports = {
     "inferno/jsx-closing-bracket-location": 0,
     "inferno/jsx-tag-spacing": 0,
     "inferno/jsx-space-before-closing": 0,
+    "inferno/jsx-no-bind": 0,
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
     "react/require-render-return": 2,

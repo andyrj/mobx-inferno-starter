@@ -28,13 +28,11 @@ if (DEV) {
 
 const history = createHistory();
 
-const pathUpdate = action('updatePath', (routerStore) => {
-  routerStore.path = location.pathname;
-})
-
 const unlisten = history.listen((location, hAction) => {
   if (routerStore.path !== location.pathname) {
-    pathUpdate(routerStore);
+    action('updatePath', (routerStore, location) => {
+      routerStore.path = location.pathname;
+    })(routerStore, location);
   }
 });
 

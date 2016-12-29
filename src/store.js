@@ -62,7 +62,7 @@ class Router {
 
   @computed get router() {
     let _router = HttpHash();
-    this.routes.foreach((route) => {
+    this.routes.forEach((route) => {
       _router.set(route.path, route.component);
     });
     return _router;
@@ -92,4 +92,4 @@ const counterStore = new Counters();
 module.exports = {
   routerStore,
   counterStore
-}
+};

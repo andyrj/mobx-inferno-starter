@@ -10,7 +10,7 @@ require(
 
 export default function App({ routerStore, counterStore }) {
   return (
-    <Provider routerStore={routerStore} counterStore={counterStore} >
+    <Provider counterStore={counterStore} routerStore={routerStore}>
       <Router />
     </Provider>
   );

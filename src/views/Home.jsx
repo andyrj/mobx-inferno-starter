@@ -9,7 +9,9 @@ export default connect(['routerStore'], function Home({routerStore}) {
       <p>{'Home'}</p>
       <div>
         <RouterLink 
-          clickHandler={({path, event}) => {routerStore.changeRoute(path, event)}}
+          clickHandler={({path, event}) => 
+            {routerStore.changeRoute(path, event);}
+          }
           path={'/counters'} 
         >{'Counters'}</RouterLink>
       </div>

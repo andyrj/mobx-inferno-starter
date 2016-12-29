@@ -1,0 +1,11 @@
+.counters .mdc-card {
+  width: 145px;
+}
+
+.counters .mdc-card .mdc-card__supporting-text {
+  text-align: center;
+}
+
+.counters .mdc-card .mdc-card__primary .mdc-button {
+  float: right;
+}
