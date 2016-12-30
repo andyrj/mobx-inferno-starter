@@ -2,34 +2,7 @@
 import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';
 import { observable, computed, action } from 'mobx';
-import shortid from 'shortid';
-import * as views from './views';
-
-class Counters {
-  @observable values = [];
-
-  @action increment(cid) {
-    this.values.filter((counter) => {
-      return counter.id === cid;
-    })[0].count += 1;
-  }
-
-  @action decrement(cid) {
-    this.values.filter((counter) => {
-      return counter.id === cid;
-    })[0].count -= 1;
-  }
-  
-  @action deleteCounter(cid) {
-    this.values.remove(this.values.filter((counter) => {
-      return counter.id === cid;
-    })[0]);
-  }
-
-  @action addCounter() {
-    this.values.push({id:shortid.generate(), count: 0});
-  }
-}
+import * as views from '../views';
 
 class Router {
   @observable path = '/';
@@ -86,10 +59,4 @@ class Router {
   }
 }
 
-const routerStore = new Router();
-const counterStore = new Counters();
-
-module.exports = {
-  routerStore,
-  counterStore
-};
+export default Object.freeze(Router);

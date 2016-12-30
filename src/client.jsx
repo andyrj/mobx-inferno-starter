@@ -3,7 +3,7 @@ import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
 import { action, reaction, useStrict } from 'mobx';
 import App from './App';
-import { counterStore, routerStore } from './store';
+import * as _stores from './stores';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
@@ -19,24 +19,26 @@ if (DEV) {
     transaction: true,
     compute: true
   });
-  stores['router'] = remotedev(routerStore);
-  stores['counters'] = remotedev(counterStore);
+  // wrap each store with remotedev for redux-devtools to work
+  Object.keys(_stores).forEach((key) => {
+    stores[key] = remotedev(_stores[key]);
+  });
 } else {
-  store['router'] = routerStore;
-  store['counters'] = counterStore;
+  // in prod we don't want to wrap just pass through
+  stores = _stores;
 }
 
 const history = createHistory();
 
 const unlisten = history.listen((location, hAction) => {
-  if (routerStore.path !== location.pathname) {
-    action('updatePath', (routerStore, location) => {
-      routerStore.path = location.pathname;
-    })(routerStore, location);
+  if (stores.router.path !== location.pathname) {
+    action('updatePath', (router, location) => {
+      router.path = location.pathname;
+    })(stores.router, location);
   }
 });
 
-const routing = reaction(() => routerStore.path, (path) => {
+const routing = reaction(() => stores.router.path, (path) => {
   if (history.location.pathname !== path) {
     history.push(path, {});
   }
@@ -45,8 +47,8 @@ const routing = reaction(() => routerStore.path, (path) => {
 const renderApp = () => {
   Inferno.render(
     <App 
-      counterStore={stores['counters']} 
-      routerStore={stores['router']} 
+      counters={stores.counters} 
+      router={stores.router} 
     />, 
       document.getElementById('root')
   );

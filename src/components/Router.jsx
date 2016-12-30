@@ -2,17 +2,14 @@
 import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
 import MenuAnchor from './MenuAnchor';
-import Menu, { onDidMount, onWillUnmount } from './Menu';
+import Menu from './Menu';
 
-export default connect(['routerStore'], function Router({ routerStore }) {
+export default connect(['router'], function Router({ router }) {
   return (
     <div id='route'>
-      <Menu 
-        onComponentDidMount={onDidMount} 
-        onComponentWillUnmount={onWillUnmount}
-      />
+      <Menu />
       <main>
-        {routerStore.routeChildren}
+        {router.routeChildren}
       </main>
     </div>
   );
