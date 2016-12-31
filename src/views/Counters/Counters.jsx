@@ -9,7 +9,7 @@ const ACTION_BTN_C = 'mdc-button mdc-button--accent mdc-button--compact';
 export default connect(['counters'], function Counters({counters}) {
   let _counters = counters.values.map((c) => {
     return (
-      <div className='mdc-card mdc-card--theme-dark' key={c.id}>
+      <div className='mdc-card' key={c.id}>
         <section className='mdc-card__primary'>
           <button 
             className={ACTION_BTN_C} 

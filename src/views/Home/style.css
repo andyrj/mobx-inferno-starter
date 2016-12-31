@@ -1,0 +1,15 @@
+#home {
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+.iconImg {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+
+#menuSpacer {
+  height: 60px;
+  width: 100%;
+}

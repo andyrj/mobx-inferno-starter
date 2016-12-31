@@ -5,16 +5,19 @@ import RouterLink from '../../components/RouterLink';
 import imgMobx from './images/mobx.jpg';
 import imgInferno from './images/inferno.png';
 
+require('./style.css');
+
 export default connect(['router'], function Home({router}) {
   return (
     <div id='home'>
+      <div id='menuSpacer' />
       <div id='icons'>
         <a href='https://github.com/mobxjs/mobx'>
-          <img alt='mobx' src={imgMobx} />
+          <img alt='mobx' className='iconImg' src={imgMobx} />
         </a>
         {' + '}
         <a href='https://github.com/infernojs/inferno'>
-          <img alt='inferno' src={imgInferno} />
+          <img alt='inferno' className='iconImg' src={imgInferno} />
         </a>
       </div>
       <div id='examples'>

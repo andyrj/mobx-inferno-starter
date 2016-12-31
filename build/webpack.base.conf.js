@@ -21,7 +21,8 @@ module.exports = {
       'inferno-create-element',
       'inferno-mobx',
       'mobx',
-      '@material/drawer'
+      '@material/drawer',
+      'tcomb-forked'
     ]
   },
   output: {

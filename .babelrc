@@ -1,13 +1,17 @@
 {   
     "presets": [
       "es2015",
-      "stage-2"
+      "stage-2",
+      "flow-tcomb-forked"
     ],
     "plugins": [
       "inferno",
       "lodash",
       "transform-object-rest-spread",
       "transform-decorators-legacy",
-      "syntax-jsx"
+      "syntax-jsx",
+      "syntax-flow",
+      "tcomb-forked",
+      "transform-flow-strip-types"
     ]
 }
