@@ -6,7 +6,7 @@ export default function RouterLink({path, classes, clickHandler, children}) {
     <a
       className={classes ? classes : ''}
       href={path}
-      onClick={(event) => {clickHandler({path, event});}}
+      onclick={(event) => {clickHandler({path, event});}}
     >
       {children}
     </a>

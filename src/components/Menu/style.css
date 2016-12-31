@@ -1,0 +1,7 @@
+#drawer {
+  z-index: 5 !important;
+}
+
+#content {
+  z-index: 3 !important;
+}

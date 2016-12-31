@@ -7,6 +7,7 @@ import * as _stores from './stores';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
+// setup devtools for components/stores
 let stores = {};
 if (DEV) {
   let remotedev = require('mobx-remotedev');
@@ -28,6 +29,7 @@ if (DEV) {
   stores = _stores;
 }
 
+// setup html5 history routing
 const history = createHistory();
 
 const unlisten = history.listen((location, hAction) => {
@@ -44,17 +46,16 @@ const routing = reaction(() => stores.router.path, (path) => {
   }
 });
 
+// define rendering entry-point
 const renderApp = () => {
   Inferno.render(
-    <App 
-      counters={stores.counters} 
-      router={stores.router} 
-    />, 
+    <App stores={stores} />, 
       document.getElementById('root')
   );
 };
 renderApp();
 
+// hot module reloading
 if (module.hot) {
   module.hot.accept('./App', () => {
     renderApp();

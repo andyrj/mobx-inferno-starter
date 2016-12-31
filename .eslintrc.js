@@ -66,10 +66,13 @@ module.exports = {
     "inferno/jsx-tag-spacing": 0,
     "inferno/jsx-space-before-closing": 0,
     "inferno/jsx-no-bind": 0,
+    "inferno/jsx-handler-names": 0,
+    "inferno/no-unknown-property": 0,
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
     "react/require-render-return": 2,
     "react/jsx-closing-bracket-location": 0,
-    "react/jsx-space-before-closing": 0
+    "react/jsx-space-before-closing": 0,
+    "react/no-unknown-property": 0
   }
 };

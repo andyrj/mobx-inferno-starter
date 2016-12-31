@@ -27,16 +27,16 @@ class Todos {
     this.filter = '';
   }
 
-  @computed getFilteredTodos() {
-    if (this.filter === '') {
-      return this.vaules;
-    } else {
-      return this.values.filter((todo) => {
+  @computed get filteredTodos() {
+    let ret = this.values;
+    if (this.filter !== '') {
+      ret = this.values.filter((todo) => {
         if (todo.text.indexOf(this.filter) > -1) {
           return true;
         }
       });
     }
+    return ret;
   }
 }
 

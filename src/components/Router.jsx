@@ -8,7 +8,7 @@ export default connect(['router'], function Router({ router }) {
   return (
     <div id='route'>
       <Menu />
-      <main>
+      <main id='content'>
         {router.routeChildren}
       </main>
     </div>

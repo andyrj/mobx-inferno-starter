@@ -8,9 +8,13 @@ require(
   '../node_modules/material-components-web/dist/material-components-web.css'
 );
 
-export default function App({ counters, router }) {
+export default function App({ stores }) {
   return (
-    <Provider counters={counters} routerStore={router}>
+    <Provider 
+      counters={stores.counters} 
+      router={stores.router}
+      todos={stores.todos}
+    >
       <Router />
     </Provider>
   );

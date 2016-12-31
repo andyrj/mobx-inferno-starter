@@ -1,12 +1,12 @@
 'use strict';
 import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';
-import { observable, computed, action } from 'mobx';
+import { observable, computed, action, asMap } from 'mobx';
 import * as views from '../views';
 
 class Router {
   @observable path = '/';
-
+  menu = undefined;
   @observable routes = [
     {
       path: '/',
@@ -21,6 +21,12 @@ class Router {
       component: views.Counters
     },
     {
+      path: '/todos',
+      text: 'Todos',
+      icon: 'mi mi-list',
+      component: views.Todos
+    },
+    {
       path: '*',
       text: '404',
       icon: 'error_outline',
@@ -30,7 +36,8 @@ class Router {
 
   @observable navLinkFilter = [
     '/',
-    '/counters'
+    '/counters',
+    '/todos'
   ]
 
   @computed get router() {

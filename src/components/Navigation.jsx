@@ -1,7 +1,6 @@
 'use strict';
 import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
-import { closeMenu } from './Menu';
 import RouterLink from './RouterLink';
 
 const NAV_C = ['mdc-temporary-drawer__content', 'mdc-list'];
@@ -10,7 +9,7 @@ const I_C = ['material-icons', 'mdc-list-item__start-detail'];
 
 const handleMenuLinkClick = ({router, path, event}) => {
   router.changeRoute(path, event);
-  closeMenu();
+  router.menu.open = false;
 };
 
 export default connect(['router'], function Navigation({ router }) {
