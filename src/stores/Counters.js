@@ -1,3 +1,4 @@
+/* @flow */
 'use strict';
 import { observable, computed, action } from 'mobx';
 import shortid from 'shortid';

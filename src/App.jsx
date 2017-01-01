@@ -1,3 +1,4 @@
+/* @flow */
 'use strict';
 import Inferno from 'inferno';
 import { Provider } from 'inferno-mobx';
