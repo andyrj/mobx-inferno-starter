@@ -1,4 +1,3 @@
-/* @flow */
 'use strict';
 import HttpHash from 'http-hash';
 import createElement from 'inferno-create-element';

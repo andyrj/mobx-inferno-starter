@@ -40,7 +40,7 @@
     "lodash": "^4.17.3",
     "material-components-web": "^0.1.1",
     "material-icons": "^0.1.0",
-    "mobx": "^2.7.0",
+    "mobx": "3.0.0-rc.1",
     "mobx-logger": "^0.3.1",
     "mobx-remotedev": "^0.2.4",
     "shortid": "^2.2.6",
