@@ -25,6 +25,7 @@ module.exports = {
     "store": true
   },
   "rules": {
+    "import/no-dynamic-require": 0,
     "strict": 0,
     "semi": 2,
     "no-extra-semi": 2,

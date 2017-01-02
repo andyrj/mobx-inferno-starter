@@ -3,12 +3,11 @@ import Inferno from 'inferno';
 import createHistory from 'history/createBrowserHistory';
 import { action, reaction, useStrict } from 'mobx';
 import App from './App';
-import * as _stores from './stores';
+import stores from './stores';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
 // setup devtools for components/stores
-let stores = {};
 if (DEV) {
   let remotedev = require('mobx-remotedev');
   let enableLogging = require('mobx-logger').enableLogging;
@@ -21,12 +20,9 @@ if (DEV) {
     compute: true
   });
   // wrap each store with remotedev for redux-devtools to work
-  Object.keys(_stores).forEach((key) => {
-    stores[key] = remotedev(_stores[key]);
+  Object.keys(stores).forEach((key) => {
+    stores[key] = remotedev(stores[key]);
   });
-} else {
-  // in prod we don't want to wrap just pass through
-  stores = _stores;
 }
 
 // setup html5 history routing

@@ -3,12 +3,11 @@ import Router from './Router';
 import Counters from './Counters';
 import Todos from './Todos';
 
-const counters = new Counters();
-const router = new Router();
-const todos = new Todos();
+class Stores {
+  counters = new Counters();
+  router = new Router();
+  todos = new Todos();
+}
 
-module.exports = {
-  counters,
-  router,
-  todos
-};
+const stores = new Stores();
+export default stores;

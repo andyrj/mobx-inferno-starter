@@ -26,7 +26,11 @@ export default connect(['router'], function Home({router}) {
         <ul>
           <li>
             <RouterLink 
-              clickHandler={({path, event}) => router.changeRoute(path, event)} 
+              clickHandler={(path, event) => {
+                event.preventDefault();
+                router.changeRoute(path);
+                router.menu.open = false;
+              }} 
               path='/counters'
             >
               {'Counters'}

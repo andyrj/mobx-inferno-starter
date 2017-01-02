@@ -60,8 +60,7 @@ class Router {
     });
   }
 
-  @action changeRoute(path, event) {
-    event.preventDefault();
+  @action changeRoute(path) {
     this.path = path;
   }
 }

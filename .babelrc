@@ -1,8 +1,7 @@
 {   
     "presets": [
       "es2015",
-      "stage-2",
-      "flow-tcomb-forked"
+      "stage-2"
     ],
     "plugins": [
       "inferno",
@@ -11,7 +10,6 @@
       "transform-decorators-legacy",
       "syntax-jsx",
       "syntax-flow",
-      "tcomb-forked",
       "transform-flow-strip-types"
     ]
 }

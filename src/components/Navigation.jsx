@@ -8,8 +8,8 @@ const NAV_C = ['mdc-temporary-drawer__content', 'mdc-list'];
 const A_C = ['mdc-list-item', 'mdc-temporary-drawer--selected'];
 const I_C = ['material-icons', 'mdc-list-item__start-detail'];
 
-const handleMenuLinkClick = ({router, path, event}) => {
-  router.changeRoute(path, event);
+const handleMenuLinkClick = (router, path) => {
+  router.changeRoute(path);
   router.menu.open = false;
 };
 
@@ -18,9 +18,10 @@ export default connect(['router'], function Navigation({ router }) {
     return (
       <RouterLink 
         classes={A_C.join(' ')} 
-        clickHandler={({path, event}) => 
-          handleMenuLinkClick({router, path, event})
-        }
+        clickHandler={(path, event) => {
+          event.preventDefault(); 
+          handleMenuLinkClick(router, path);
+        }}
         key={link.path} 
         path={link.path}
       >
