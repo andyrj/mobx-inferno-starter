@@ -24,6 +24,7 @@ if (DEV) {
     stores[key] = remotedev(stores[key]);
   });
 }
+Object.freeze(stores);
 
 // setup html5 history routing
 const history = createHistory();

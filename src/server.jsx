@@ -1,31 +1,16 @@
 'use strict';
+import 'babel-polyfill';
 import Inferno from 'inferno';
 import InfernoServer from 'inferno-server';
-import { connect } from 'inferno-mobx';
-import { resolve } from 'path';
-import fs from 'fs';
-import express from 'express';
+import koa from 'koa';
+import mount from 'koa-mount';
+import convert from 'koa-convert';
+import serve from 'koa-static';
 import optimist from 'optimist';
 import App from './App';
 import stores from './stores';
 
 const assets = require('../dist/assets.json');
-
-// nginx will look for $uri with the .html extension
-const prerenderRoutes = [
-  {
-    path: '/',
-    filename: 'index.html'
-  },
-  {
-    path: '/counters',
-    filename: 'counters.html'
-  },
-  {
-    path: '/todos',
-    filename: 'todos.html'
-  }
-];
 
 const Html = ({ children }) => {
   return (
@@ -61,32 +46,16 @@ const resolvePath = (path) => {
   return html;
 };
 
-let argv = optimist
-            .alias('p', 'prerender')
-            .alias('o', 'out')
-            .default('o', 'site/')
-            .argv;
+const app = new koa();
 
-if (argv.prerender && argv.out) {
-  prerenderRoutes.forEach((route) => {
-    fs.writeFile(
-      resolve(__dirname, argv.out + route.filename), resolvePath(route.path), 
-      (err) => {
-        if(err) {
-            return console.log(err); // eslint-disable-line 
-        }
-        console.log(`${route.filename} saved...`); //eslint-disable-line
-    }); 
-  });
-} else { // start express server on port 8080
-  const app = express();
+app.use(convert(mount('/dist', serve('./dist/'))));
 
-  app.use((req, res) => {
-    res.send(resolvePath(req.url));
-  });
+app.use(async (ctx) => {
+  ctx.body = resolvePath(ctx.request.url);
+});
 
-  app.listen(8080, () => {
-    console.log('Server listening on port 8080.'); // eslint-disable-line
-  });
-}
+app.listen(8080, () => {
+  console.log('Server listening on port 8080.'); // eslint-disable-line
+});
   
+export default resolvePath;

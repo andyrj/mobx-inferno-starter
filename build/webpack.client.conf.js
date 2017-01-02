@@ -1,6 +1,8 @@
+const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Purify = require('purifycss-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
 // const WebpackShellPlugin = require('webpack-shell-plugin')
 const base = require('./webpack.base.conf');
 
@@ -13,6 +15,11 @@ const config = Object.assign({}, base, {
     // extract vendor chunks for better caching
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor']
+    }),
+    new AssetsPlugin(
+    {
+      path: path.join(__dirname, '../dist/'),
+      filename: 'assets.json'
     })
   ])
 });

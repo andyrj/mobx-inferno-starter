@@ -16,8 +16,6 @@ base.module.rules.push({
   loader: 'null-loader'
 });
 
-base.plugins = [];
-
 module.exports = Object.assign({}, base, {
   target: 'node',
   devtool: false,
@@ -29,7 +27,7 @@ module.exports = Object.assign({}, base, {
   externals: Object.keys(require('../package.json').dependencies)
     .filter((p) => {
       if (p.indexOf('material-components-web') > -1 ||
-          p.indexOf('@material/') > -1) {
+          p.indexOf('@material/') > -1 ) {
         return false;
       } else {
         return true;
@@ -39,8 +37,7 @@ module.exports = Object.assign({}, base, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV':
-      JSON.stringify(process.env.NODE_ENV || 'development'),
-      'process.env.INFERNO_ENV': '"server"'
+      JSON.stringify(process.env.NODE_ENV || 'development')
     })
   ]
 });
