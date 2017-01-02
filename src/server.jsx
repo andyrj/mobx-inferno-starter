@@ -36,7 +36,7 @@ const Html = ({ children }) => {
   );
 };
 
-const resolvePath = (path) => {
+const renderPath = (path) => {
   stores.router.changeRoute(path);
   let html = '<!DOCTYPE html>\n' + InfernoServer.renderToString(
     <Html>
@@ -51,11 +51,11 @@ const app = new koa();
 app.use(convert(mount('/dist', serve('./dist/'))));
 
 app.use(async (ctx) => {
-  ctx.body = resolvePath(ctx.request.url);
+  ctx.body = renderPath(ctx.request.url);
 });
 
 app.listen(8080, () => {
   console.log('Server listening on port 8080.'); // eslint-disable-line
 });
   
-export default resolvePath;
+export default renderPath;

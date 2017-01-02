@@ -2,7 +2,7 @@
 import optimist from 'optimist';
 import fs from 'fs';
 import { resolve } from 'path';
-import { resolvePath } from '../dist/server-bundle';
+import { renderPath } from '../dist/server-bundle';
 
 // nginx will look for $uri with the .html extension
 const prerenderRoutes = [
