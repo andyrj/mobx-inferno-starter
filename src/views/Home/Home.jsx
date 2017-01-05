@@ -8,6 +8,14 @@ import imgInferno from './images/inferno.png';
 
 require('./style.css');
 
+const linkHandler = ({router, path, event}) => { 
+  event.preventDefault();
+  router.changeRoute(path);
+  if (router.menu) {
+    router.menu.open = false;
+  }
+};
+
 export default connect(['router'], function Home({router}) {
   return (
     <div id='home'>
@@ -26,13 +34,7 @@ export default connect(['router'], function Home({router}) {
         <ul>
           <li>
             <RouterLink 
-              clickHandler={(path, event) => {
-                event.preventDefault();
-                router.changeRoute(path);
-                if (router.menu) {
-                  router.menu.open = false;
-                }
-              }} 
+              clickHandler={(path, event) => linkHandler({router, path, event})}
               path='/counters'
             >
               {'Counters'}
@@ -40,7 +42,7 @@ export default connect(['router'], function Home({router}) {
           </li>
           <li>
             <RouterLink 
-              clickHandler={({path, event}) => router.changeRoute(path, event)} 
+              clickHandler={(path, event) => linkHandler({router, path, event})}
               path='/todos'
             >
               {'Todos'}
