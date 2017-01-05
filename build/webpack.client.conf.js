@@ -77,7 +77,7 @@ if (process.env.NODE_ENV === 'production') {
     loader: 'style-loader!css-loader'
   });
   config.module.rules.push({
-    test: /\.css$/,
+    test: /\.scss$/,
     loader: `style-loader!css-loader!sass-loader?includePaths[]=${path.resolve(__dirname, '../node_modules')}`
   });
 

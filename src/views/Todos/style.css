@@ -1,0 +1,11 @@
+.inputLi {
+  list-style-type: none;
+}
+
+.list-item {
+  list-style-type: none;
+}
+
+.top-spacer {
+  height: 20px;
+}

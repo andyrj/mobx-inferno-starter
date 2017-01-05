@@ -29,7 +29,9 @@ export default connect(['router'], function Home({router}) {
               clickHandler={(path, event) => {
                 event.preventDefault();
                 router.changeRoute(path);
-                router.menu.open = false;
+                if (router.menu) {
+                  router.menu.open = false;
+                }
               }} 
               path='/counters'
             >

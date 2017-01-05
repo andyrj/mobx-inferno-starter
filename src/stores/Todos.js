@@ -6,8 +6,12 @@ class Todos {
   @observable values = [];
   @observable filter = '';
 
-  @action addTodo(todo) {
-    this.values.push(todo);
+  @action addTodo(text) {
+    this.values.push({
+        id: shortid.generate(), 
+        text, 
+        completed: false
+    });
   }
 
   @action deleteTodo(tid) {
