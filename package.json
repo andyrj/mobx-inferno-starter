@@ -88,16 +88,17 @@
     "jsinspect": "^0.8.0",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
+    "node-sass": "^4.1.1",
     "null-loader": "^0.1.1",
     "purifycss-webpack-plugin": "^2.0.3",
+    "sass-loader": "^4.1.1",
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
     "testdom": "^2.0.0",
     "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.1",
-    "webpack-dev-server": "2.2.0-rc.0",
-    "webpack-shell-plugin": "^0.5.0"
+    "webpack-dev-server": "2.2.0-rc.0"
   },
   "repository": "https://github.com/andyrj/mobx-inferno-starter"
 }

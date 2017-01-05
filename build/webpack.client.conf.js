@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Purify = require('purifycss-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-// const WebpackShellPlugin = require('webpack-shell-plugin')
 const base = require('./webpack.base.conf');
 
 const config = Object.assign({}, base, {
@@ -40,6 +39,13 @@ if (process.env.NODE_ENV === 'production') {
       loader: 'css-loader'
     })
   });
+  config.module.rules.push({
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract({
+      fallbackLoader: 'style-loader',
+      loader: `css-loader!sass-loader?includePaths[]=${path.resolve(__dirname, '../node_modules')}`
+    })
+  });
   config.plugins.push(
     new ExtractTextPlugin('styles.[hash].css'),
     // this is needed in webpack 2 for minifying CSS
@@ -50,12 +56,9 @@ if (process.env.NODE_ENV === 'production') {
       basePath: __dirname,
       paths: [
         'dist/vendor*.js',
-        'dist/app*.js'
+        'dist/site*.js'
       ]
-    })// ,
-    // dedupe and minify css after webpack build is finished
-    // new WebpackShellPlugin({onBuildExit: ['ls -d1 dist/styles* 
-    // 		| xargs -I {} ./node_modules/.bin/cleancss -o {} {}']})
+    })
   );
 } else {
   config.performance = { hints: false };
@@ -73,6 +76,11 @@ if (process.env.NODE_ENV === 'production') {
     test: /\.css$/,
     loader: 'style-loader!css-loader'
   });
+  config.module.rules.push({
+    test: /\.css$/,
+    loader: `style-loader!css-loader!sass-loader?includePaths[]=${path.resolve(__dirname, '../node_modules')}`
+  });
+
 }
 
 module.exports = config;

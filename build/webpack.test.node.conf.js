@@ -48,7 +48,7 @@ var testConfig = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|css|scss)$/,
         loader: 'null-loader'
       }
     ]

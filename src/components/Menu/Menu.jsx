@@ -11,8 +11,6 @@ import router from '../../stores';
 
 // pull in Menu style.css
 require('./style.css');
-// pull in material-components-web/drawer css
-require('../../../node_modules/@material/drawer/dist/mdc.drawer.css');
 
 // singleton do not put multiple menus on a page...
 const openMenu = (router) => {

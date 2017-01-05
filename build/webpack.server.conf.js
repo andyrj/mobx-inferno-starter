@@ -16,6 +16,11 @@ base.module.rules.push({
   loader: 'null-loader'
 });
 
+base.module.rules.push({
+  test: /\.scss$/,
+  loader: 'null-loader'
+});
+
 module.exports = Object.assign({}, base, {
   target: 'node',
   devtool: false,
