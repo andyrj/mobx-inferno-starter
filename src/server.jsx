@@ -29,7 +29,6 @@ const Html = ({ children }) => {
       </head>
       <body>
         <div id="root">{children}</div>
-        <script src={assets.vendor.js} />
         <script src={assets.site.js} />
       </body>
     </html>

@@ -9,10 +9,11 @@ const DEV = process.env.NODE_ENV !== 'production';
 
 // setup devtools for components/stores
 if (DEV) {
-  let remotedev = require('mobx-remotedev');
-  let enableLogging = require('mobx-logger').enableLogging;
+  // let remotedev = require('mobx-remotedev');  
+  //  let enableLogging = require('mobx-logger').enableLogging;
   require('inferno-devtools');
   useStrict(true);
+  /*
   enableLogging({predicate: () => true,
     action: true,
     reaction: true,
@@ -22,7 +23,7 @@ if (DEV) {
   // wrap each store with remotedev for redux-devtools to work
   Object.keys(stores).forEach((key) => {
     stores[key] = remotedev(stores[key]);
-  });
+  });*/
 }
 Object.freeze(stores);
 

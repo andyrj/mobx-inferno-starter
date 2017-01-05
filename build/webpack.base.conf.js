@@ -8,13 +8,21 @@ module.exports = {
       'history',
       'http-hash',
       'inferno',
-      'inferno-component',
-      'inferno-create-class',
       'inferno-create-element',
+      'inferno-component',
       'inferno-mobx',
-      'mobx'
+      'mobx',
+      '@material/drawer',
+      'shortid'
     ]
-  },
+  }, // ensure dev tools don't get built into prod bundles
+  externals: process.env.NODE_ENV !== 'production' ? '' : [
+    'inferno-devtools', 
+    'mobx-remotedev',
+    'mobx-logger',
+    'history/createHashHistory', // trimming unused history functionality
+    'history/createMemoryHistory'
+  ],
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
