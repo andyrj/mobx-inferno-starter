@@ -48,7 +48,7 @@
     "lodash": "^4.17.4",
     "material-components-web": "^0.1.1",
     "material-icons": "^0.1.0",
-    "mobx": "3.0.0-rc.1",
+    "mobx": "^3.0.0",
     "optimist": "^0.6.1",
     "shortid": "^2.2.6"
   },
@@ -90,7 +90,7 @@
     "jsinspect": "^0.8.0",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.2.0",
     "null-loader": "^0.1.1",
     "purifycss-webpack-plugin": "^2.0.3",
     "sass-loader": "^4.1.1",
