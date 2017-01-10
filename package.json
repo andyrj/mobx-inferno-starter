@@ -94,6 +94,7 @@
     "null-loader": "^0.1.1",
     "purifycss-webpack-plugin": "^2.0.3",
     "sass-loader": "^4.1.1",
+    "scandir": "^0.1.2",
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
     "testdom": "^2.0.0",
