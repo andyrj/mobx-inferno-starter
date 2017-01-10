@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@material/animation@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.1.0.tgz#1f0348c0df4e2d5dabe284b6cced811ac608346a"
+"@material/animation@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.1.1.tgz#7c7616a3a9fc31bdbeaeda4df4472c4e5ce85fa2"
 
 "@material/auto-init@^0.1.0":
   version "0.1.1"
@@ -14,54 +14,54 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.1.0.tgz#aae23050425f3c8d2b67b370ffc667dc042db352"
 
-"@material/button@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.1.0.tgz#cbcd8674fb45764e4e326e334bec6a4f09a8f37d"
+"@material/button@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.1.1.tgz#8c3b1f8c7992363ec8fb60094239b72901272ab9"
   dependencies:
-    "@material/animation" "^0.1.0"
-    "@material/elevation" "^0.1.0"
+    "@material/animation" "^0.1.1"
+    "@material/elevation" "^0.1.1"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/card@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.1.0.tgz#45aea15f21ba6a0f7cb25a1233481a2f1de9e09f"
+"@material/card@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.1.1.tgz#0f37119493b9f2a52e913746afb61965c8ce5bd2"
   dependencies:
-    "@material/elevation" "^0.1.0"
+    "@material/elevation" "^0.1.1"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/checkbox@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/checkbox/-/checkbox-0.1.0.tgz#0dc1dedc08a992b89d6ef891625af616ed095ad4"
+"@material/checkbox@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/checkbox/-/checkbox-0.1.1.tgz#4fbe54da6b743fa7095e4653712a39f14e5bee2c"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
     "@material/theme" "^0.1.0"
 
-"@material/drawer@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-0.1.0.tgz#db88172391c133ab9b3202f7b7912cc587f61aac"
+"@material/drawer@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-0.1.1.tgz#3c9e9fa079626e2eb777f43b7e07d2d8fe3cb74c"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
-    "@material/elevation" "^0.1.0"
+    "@material/elevation" "^0.1.1"
     "@material/rtl" "^0.1.0"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/elevation@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.1.0.tgz#d2363eaa7c7d0541ad191b0f34c73694a9b7d372"
+"@material/elevation@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.1.1.tgz#8683228b49e33c6df1e8c278e99e9b5b607f5be6"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
 
-"@material/fab@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/fab/-/fab-0.1.0.tgz#c605788ea8b7330cc5b3ccc24e84f3ef5a097e3c"
+"@material/fab@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@material/fab/-/fab-0.2.0.tgz#6bbbb6d486eab6ecb0fad165dc8a0733c12e72d3"
   dependencies:
-    "@material/animation" "^0.1.0"
-    "@material/elevation" "^0.1.0"
+    "@material/animation" "^0.1.1"
+    "@material/elevation" "^0.1.1"
     "@material/theme" "^0.1.0"
 
 "@material/form-field@^0.1.0":
@@ -72,13 +72,13 @@
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/icon-toggle@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/icon-toggle/-/icon-toggle-0.1.0.tgz#dacfb5cfec206801009b9e00e1cf32e7ed803c42"
+"@material/icon-toggle@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/icon-toggle/-/icon-toggle-0.1.1.tgz#1c116b0070329aa14b2baebbc9857b9a7464e10e"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
-    "@material/ripple" "^0.1.0"
+    "@material/ripple" "^0.1.1"
     "@material/theme" "^0.1.0"
 
 "@material/list@^0.1.0":
@@ -89,30 +89,30 @@
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/menu@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/menu/-/menu-0.1.0.tgz#6af489b18e47e2e92edc1e0969d5601c441416d9"
+"@material/menu@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/menu/-/menu-0.1.1.tgz#ef3cf2b3242bb4bf691aa7c60123c8e5d24b863d"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
-    "@material/elevation" "^0.1.0"
+    "@material/elevation" "^0.1.1"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/radio@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/radio/-/radio-0.1.0.tgz#b0c07ec4017c1e8d8ccf4ddda83bd18e8de0ee77"
+"@material/radio@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/radio/-/radio-0.1.1.tgz#c40949eb9398957dbea151dec7eb02e3ffe2d54d"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
-    "@material/ripple" "^0.1.0"
+    "@material/ripple" "^0.1.1"
     "@material/theme" "^0.1.0"
 
-"@material/ripple@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.1.0.tgz#b6fe5c4fc1a509aee76c2dd8555844dce4b61f8d"
+"@material/ripple@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.1.1.tgz#f244bca2aba5467d776d5c2ce12e348e381651cf"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
     "@material/theme" "^0.1.0"
 
@@ -120,34 +120,34 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.1.0.tgz#990946ba31c5af76b085bc445ba9054708afb9e1"
 
-"@material/select@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/select/-/select-0.1.0.tgz#2c980e6257e0adefe88e68b4ef433ca51008b2b0"
+"@material/select@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/select/-/select-0.1.1.tgz#a44a99f29ac2416da80f5e538bd1ae105815805c"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
     "@material/list" "^0.1.0"
-    "@material/menu" "^0.1.0"
+    "@material/menu" "^0.1.1"
     "@material/rtl" "^0.1.0"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/snackbar@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/snackbar/-/snackbar-0.1.0.tgz#9a261fe0c764d6b8bc22e3c6f6969505b8392b4a"
+"@material/snackbar@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/snackbar/-/snackbar-0.1.1.tgz#90d62887238e45675940993e68896e450328e71f"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
-    "@material/button" "^0.1.0"
+    "@material/button" "^0.1.1"
     "@material/rtl" "^0.1.0"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
-"@material/textfield@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@material/textfield/-/textfield-0.1.0.tgz#910423e4243214ffe5394e0aee2a1257858a23f8"
+"@material/textfield@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@material/textfield/-/textfield-0.1.1.tgz#762477515b818dc1dedf25cbb3a73211947d71ff"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/base" "^0.1.0"
     "@material/rtl" "^0.1.0"
     "@material/theme" "^0.1.0"
@@ -630,11 +630,12 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-inferno@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-inferno/-/babel-plugin-inferno-1.4.0.tgz#944c95b16520fb44914c846601484716852a8421"
+babel-plugin-inferno@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-inferno/-/babel-plugin-inferno-1.5.0.tgz#9beb329562ca5312a6b444b998d17e4bac842f79"
   dependencies:
     babel-plugin-syntax-jsx "^6.18.0"
+    inferno-vnode-flags "^1.0.7"
 
 babel-plugin-lodash@^3.2.11:
   version "3.2.11"
@@ -1984,15 +1985,15 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-airbnb-base@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-10.0.1.tgz#f17d4e52992c1d45d1b7713efbcd5ecd0e7e0506"
+eslint-config-airbnb-base@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.0.1.tgz#5401dba284c6b7d7c8fb1c2ee19aba018f9dfa21"
 
-eslint-config-airbnb@^13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-13.0.0.tgz#688d15d3c276c0c753ae538c92a44397d76ae46e"
+eslint-config-airbnb@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-14.0.0.tgz#bfd87a71102ba3ee19c3733357000b3d5e39790f"
   dependencies:
-    eslint-config-airbnb-base "^10.0.0"
+    eslint-config-airbnb-base "^11.0.1"
 
 eslint-config-standard@^6.2.1:
   version "6.2.1"
@@ -2028,17 +2029,17 @@ eslint-plugin-import@latest:
     minimatch "^3.0.3"
     pkg-up "^1.0.0"
 
-eslint-plugin-inferno@^6.8.0:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-inferno/-/eslint-plugin-inferno-6.8.0.tgz#c74fa9625fbc6d3434802d8430837f57ba31a525"
+eslint-plugin-inferno@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-inferno/-/eslint-plugin-inferno-6.9.0.tgz#eb36a33e69d90b0bf7dcc3eec51eb622452be690"
   dependencies:
     array.prototype.find "^2.0.1"
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.4"
 
-eslint-plugin-jsx-a11y@2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-2.2.3.tgz#4e35cb71b8a7db702ac415c806eb8e8d9ea6c65d"
+eslint-plugin-jsx-a11y@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-3.0.2.tgz#9f0eabcafde3d2a2600d96a66adb90d099e841fe"
   dependencies:
     damerau-levenshtein "^1.0.0"
     jsx-ast-utils "^1.0.0"
@@ -2048,10 +2049,11 @@ eslint-plugin-promise@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.4.0.tgz#6ba9048c2df57be77d036e0c68918bc9b4fc4195"
 
-eslint-plugin-react@^6.8.0:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.8.0.tgz#741ab5438a094532e5ce1bbb935d6832356f492d"
+eslint-plugin-react@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.9.0.tgz#54c2e9906b76f9d10142030bdc34e9d6840a0bb2"
   dependencies:
+    array.prototype.find "^2.0.1"
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.4"
 
@@ -2063,9 +2065,9 @@ eslint-plugin-standard@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3"
 
-eslint@^3.12.2:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.12.2.tgz#6be5a9aa29658252abd7f91e9132bab1f26f3c34"
+eslint@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.13.1.tgz#564d2646b5efded85df96985332edd91a23bff25"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -2097,7 +2099,7 @@ eslint@^3.12.2:
     require-uncached "^1.0.2"
     shelljs "^0.7.5"
     strip-bom "^3.0.0"
-    strip-json-comments "~1.0.1"
+    strip-json-comments "~2.0.1"
     table "^3.7.8"
     text-table "~0.2.0"
     user-home "^2.0.0"
@@ -2651,9 +2653,9 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
-history@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/history/-/history-4.5.0.tgz#7313388109333bf5796fff7407cee1850e8c5061"
+history@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/history/-/history-4.5.1.tgz#44935a51021e3b8e67ebac267a35675732aba569"
   dependencies:
     invariant "^2.2.1"
     loose-envify "^1.2.0"
@@ -2792,51 +2794,57 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-inferno-component@1.0.7, inferno-component@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.0.7.tgz#a3b350ea023e7056fd5b10392053bb0a207ed99d"
+inferno-component@1.1.2, inferno-component@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.1.2.tgz#e9ab1661a3e5731f5f40c1dbd96ad21d2083537e"
   dependencies:
-    inferno "1.0.7"
+    inferno "1.1.2"
 
-inferno-create-class@1.0.7, inferno-create-class@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-1.0.7.tgz#a0b0e46711272b496a73c29eebad6f91519de950"
+inferno-create-class@1.1.2, inferno-create-class@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-1.1.2.tgz#0f0300304b5a62e02d274340df3044842fec5451"
   dependencies:
-    inferno "1.0.7"
-    inferno-component "1.0.7"
+    inferno "1.1.2"
+    inferno-component "1.1.2"
 
-inferno-create-element@1.0.7, inferno-create-element@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-create-element/-/inferno-create-element-1.0.7.tgz#864fd55d891ab5b66de7ae95d67d565cefa81c60"
+inferno-create-element@1.1.2, inferno-create-element@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-create-element/-/inferno-create-element-1.1.2.tgz#d7a24cf82813c9581f8d7ffda5cf0ba62e5290fd"
   dependencies:
-    inferno "1.0.7"
+    inferno "1.1.2"
 
-inferno-devtools@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-devtools/-/inferno-devtools-1.0.7.tgz#8c90f46dec3ad5b55729ea979fea9a53acb8737e"
+inferno-devtools@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-devtools/-/inferno-devtools-1.1.2.tgz#5d3432b31febfeaa3689c63d0c1327eb8c913449"
   dependencies:
-    inferno "1.0.7"
-    inferno-component "1.0.7"
+    inferno "1.1.2"
+    inferno-component "1.1.2"
 
-inferno-mobx@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-mobx/-/inferno-mobx-1.0.7.tgz#5ba5ad27e99c1a51c396b1fb49cc34d374c0c29e"
+inferno-mobx@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-mobx/-/inferno-mobx-1.1.2.tgz#92adbd37b938dbebf2eaf3bfb6af1c7075212a16"
   dependencies:
-    inferno "1.0.7"
-    inferno-component "1.0.7"
-    inferno-create-class "1.0.7"
-    inferno-create-element "1.0.7"
+    inferno "1.1.2"
+    inferno-component "1.1.2"
+    inferno-create-class "1.1.2"
+    inferno-create-element "1.1.2"
     mobx "*"
 
-inferno-server@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno-server/-/inferno-server-1.0.7.tgz#af7c49672c7d20f341622ff20cf6ea5efe70b7a4"
+inferno-server@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-server/-/inferno-server-1.1.2.tgz#15b9f435a4a11f0845c73ab35ee5f30ccf4763cf"
   dependencies:
-    inferno "1.0.7"
+    inferno "1.1.2"
 
-inferno@1.0.7, inferno@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.0.7.tgz#6e4cd800cc752ff76876f5d310dbec508ce0dcbc"
+inferno-vnode-flags@^1.0.7:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-1.1.2.tgz#5cd56ca11a01521d92a2a056c51f6e889f2b4635"
+  dependencies:
+    inferno "1.1.2"
+
+inferno@1.1.2, inferno@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.1.2.tgz#7809927546f8e5eb8163fb61b314df0cf0517f54"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -3550,28 +3558,28 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-material-components-web@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/material-components-web/-/material-components-web-0.1.1.tgz#ca2190f909137f59808e2af64915c61e3374e58a"
+material-components-web@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/material-components-web/-/material-components-web-0.2.0.tgz#9efb1f0c300ddd0e8ff45d91106f4eb71295ae4a"
   dependencies:
-    "@material/animation" "^0.1.0"
+    "@material/animation" "^0.1.1"
     "@material/auto-init" "^0.1.0"
     "@material/base" "^0.1.0"
-    "@material/button" "^0.1.0"
-    "@material/card" "^0.1.0"
-    "@material/checkbox" "^0.1.0"
-    "@material/drawer" "^0.1.0"
-    "@material/elevation" "^0.1.0"
-    "@material/fab" "^0.1.0"
+    "@material/button" "^0.1.1"
+    "@material/card" "^0.1.1"
+    "@material/checkbox" "^0.1.1"
+    "@material/drawer" "^0.1.1"
+    "@material/elevation" "^0.1.1"
+    "@material/fab" "^0.2.0"
     "@material/form-field" "^0.1.0"
-    "@material/icon-toggle" "^0.1.0"
+    "@material/icon-toggle" "^0.1.1"
     "@material/list" "^0.1.0"
-    "@material/menu" "^0.1.0"
-    "@material/radio" "^0.1.0"
-    "@material/ripple" "^0.1.0"
-    "@material/select" "^0.1.0"
-    "@material/snackbar" "^0.1.0"
-    "@material/textfield" "^0.1.0"
+    "@material/menu" "^0.1.1"
+    "@material/radio" "^0.1.1"
+    "@material/ripple" "^0.1.1"
+    "@material/select" "^0.1.1"
+    "@material/snackbar" "^0.1.1"
+    "@material/textfield" "^0.1.1"
     "@material/theme" "^0.1.0"
     "@material/typography" "^0.1.0"
 
@@ -5117,13 +5125,17 @@ strip-indent@^1.0.0, strip-indent@^1.0.1:
   dependencies:
     get-stdin "^4.0.1"
 
-strip-json-comments@1.0.2, strip-json-comments@~1.0.1:
+strip-json-comments@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-1.0.2.tgz#5a48ab96023dbac1b7b8d0ffabf6f63f1677be9f"
 
 strip-json-comments@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-1.0.4.tgz#1e15fbcac97d3ee99bf2d73b4c656b082bbafb91"
+
+strip-json-comments@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 style-loader@^0.13.1:
   version "0.13.1"
