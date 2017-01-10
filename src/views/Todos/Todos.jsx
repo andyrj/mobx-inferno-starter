@@ -33,7 +33,7 @@ export default class Todos extends Component {
               onChange={() => {todos.toggleTodo(todo.id);}} 
               type="checkbox" 
             />
-            <label for="input">{todo.text}</label>
+            <label htmlFor="input">{todo.text}</label>
           </div>
         </li>
       );
@@ -57,7 +57,7 @@ export default class Todos extends Component {
                 />
                 <label 
                   className="mdc-textfield__label" 
-                  for="filter-textfield"
+                  htmlFor="filter-textfield"
                 >
                   {'Filter'}
                 </label>
@@ -87,7 +87,7 @@ export default class Todos extends Component {
                 />
                 <label 
                   className="mdc-textfield__label" 
-                  for="add-textfield"
+                  htmlFor="add-textfield"
                 >
                   {'New Todo'}
                 </label>
