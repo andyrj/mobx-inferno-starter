@@ -13,6 +13,7 @@ import './style.css';
 export default class Todos extends Component {
   filterTextfield: any;
   addTextfield: any;
+  todoInput: string;
 
   componentDidMount() {
     this.filterTextfield = 
@@ -26,7 +27,12 @@ export default class Todos extends Component {
       return (
         <li className='mdc-list-item list-item' key={todo.id}>
           <div className="mdc-form-field">
-            <input type="checkbox" id="input" checked={todo.completed} />
+            <input 
+              checked={todo.completed} 
+              id="input" 
+              onChange={() => {todos.toggleTodo(todo.id);}} 
+              type="checkbox" 
+            />
             <label for="input">{todo.text}</label>
           </div>
         </li>
@@ -41,8 +47,12 @@ export default class Todos extends Component {
             <div id='filterControl'>
               <div class="mdc-textfield" id='filter-textfield'>
                 <input  
-                  className="mdc-textfield__input" 
-                  id="filter-textfield"  
+                  className="mdc-textfield__input"
+                  id="filter-input"
+                  onInput={(event) => {
+                    todos.setFilter(event.target.value);
+                  }}
+                  value={todos.filter}  
                   type="text" 
                 />
                 <label 
@@ -52,6 +62,15 @@ export default class Todos extends Component {
                   {'Filter'}
                 </label>
               </div>
+              <button
+                className="mdc-button mdc-button--accent mdc-button--compact"
+                onClick={(event) => {
+                  todos.setFilter('');
+                  document.getElementById('filter-input').focus();
+                }}
+              >
+                {'Clear'}
+              </button>
             </div>
           </li>
           <li className='inputLi'>
@@ -59,19 +78,27 @@ export default class Todos extends Component {
               <div class="mdc-textfield" id='add-textfield'>
                 <input  
                   className="mdc-textfield__input" 
-                  id="newTodo-textfield"  
-                  type="text" 
+                  id="newTodo-input"
+                  onInput={(event) => {
+                    todos.setNewTodo(event.target.value);
+                  }}
+                  value={todos.newTodo}
+                  type="text"
                 />
                 <label 
                   className="mdc-textfield__label" 
-                  for="newTodo-textfield"
+                  for="add-textfield"
                 >
                   {'New Todo'}
                 </label>
               </div>
               <button
                 className="mdc-button mdc-button--accent mdc-button--compact"
-                onClick={() => {todos.addTodo('test');}} 
+                onClick={() => {
+                  todos.addTodo();
+                  todos.setNewTodo('');
+                  document.getElementById('newTodo-input').focus();
+                }}
               >
                 {'Add'}
               </button>

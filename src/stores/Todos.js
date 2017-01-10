@@ -5,11 +5,16 @@ import shortid from 'shortid';
 class Todos {
   @observable values = [];
   @observable filter = '';
+  @observable newTodo = '';
 
-  @action addTodo(text) {
+  @action setNewTodo(text) {
+    this.newTodo = text;
+  }
+
+  @action addTodo() {
     this.values.push({
         id: shortid.generate(), 
-        text, 
+        text: this.newTodo, 
         completed: false
     });
   }
@@ -27,8 +32,12 @@ class Todos {
     todo.completed = !todo.completed;
   }
 
-  @action clearFilter() {
-    this.filter = '';
+  @action setFilter(text) {
+    this.filter = text;
+  }
+
+  clearFilter() {
+    this.setFilter('');
   }
 
   @computed get filteredTodos() {
