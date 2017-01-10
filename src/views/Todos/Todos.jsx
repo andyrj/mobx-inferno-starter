@@ -52,8 +52,8 @@ export default class Todos extends Component {
                   onInput={(event) => {
                     todos.setFilter(event.target.value);
                   }}
-                  value={todos.filter}  
-                  type="text" 
+                  type="text"
+                  value={todos.filter}   
                 />
                 <label 
                   className="mdc-textfield__label" 
@@ -82,8 +82,8 @@ export default class Todos extends Component {
                   onInput={(event) => {
                     todos.setNewTodo(event.target.value);
                   }}
-                  value={todos.newTodo}
                   type="text"
+                  value={todos.newTodo}
                 />
                 <label 
                   className="mdc-textfield__label" 
