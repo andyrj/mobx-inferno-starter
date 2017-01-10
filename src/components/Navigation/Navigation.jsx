@@ -2,7 +2,7 @@
 'use strict';
 import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
-import RouterLink from './RouterLink';
+import RouterLink from '../RouterLink';
 
 const NAV_C = ['mdc-temporary-drawer__content', 'mdc-list'];
 const A_C = ['mdc-list-item', 'mdc-temporary-drawer--selected'];
