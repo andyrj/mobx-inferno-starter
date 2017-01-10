@@ -2804,7 +2804,7 @@ inferno-component@1.1.2, inferno-component@^1.1.2:
   dependencies:
     inferno "1.1.2"
 
-inferno-create-class@1.1.2, inferno-create-class@^1.1.2:
+inferno-create-class@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-1.1.2.tgz#0f0300304b5a62e02d274340df3044842fec5451"
   dependencies:
