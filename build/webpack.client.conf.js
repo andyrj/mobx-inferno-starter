@@ -35,15 +35,15 @@ if (process.env.NODE_ENV === 'production') {
   config.module.rules.push({
     test: /\.css$/,
     loader: ExtractTextPlugin.extract({
-      fallbackLoader: 'style-loader',
-      loader: 'css-loader'
+      fallback: 'style-loader',
+      use: 'css-loader'
     })
   });
   config.module.rules.push({
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract({
-      fallbackLoader: 'style-loader',
-      loader: `css-loader!sass-loader?includePaths[]=${path.resolve(__dirname, '../node_modules')}`
+      fallback: 'style-loader',
+      use: `css-loader!sass-loader?includePaths[]=${path.resolve(__dirname, '../node_modules')}`
     })
   });
   config.plugins.push(
