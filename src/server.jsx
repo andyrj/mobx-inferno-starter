@@ -21,11 +21,9 @@ const Html = ({ children }) => {
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0" 
           name="viewport"
         />
-        <link 
-          href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-          rel="stylesheet" 
-        />
-        <link href={assets.site.css} rel="stylesheet" />
+        {assets.site.css && 
+          <link href={assets.site.css} rel="stylesheet" />
+        }
       </head>
       <body>
         <div id="root">{children}</div>

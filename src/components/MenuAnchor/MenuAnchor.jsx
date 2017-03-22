@@ -9,7 +9,6 @@ const I_C = ['mi', 'mi-apps'];
 export default ({ openMenu }) => {
   return (
     <button 
-      className='mdc-button' 
       id='menuAnchor' 
       onClick={openMenu} 
       tabIndex='0'

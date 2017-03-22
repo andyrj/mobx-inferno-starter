@@ -48,7 +48,7 @@ const routing = reaction(() => stores.router.path, (path) => {
 const renderApp = () => {
   Inferno.render(
     <App stores={stores} />, 
-      document.getElementById('root')
+    document.getElementById('root')
   );
 };
 renderApp();

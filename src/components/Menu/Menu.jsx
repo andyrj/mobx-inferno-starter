@@ -1,10 +1,12 @@
-/* @flow */
+'use strict';
 import Inferno from 'inferno';
 import { connect } from 'inferno-mobx';
+/*
 import {
   MDCTemporaryDrawer,
   MDCTemporaryDrawerFoundation
 } from '@material/drawer';
+*/
 import MenuAnchor from '../MenuAnchor';
 import Navigation from '../Navigation';
 import router from '../../stores';
@@ -17,7 +19,7 @@ const openMenu = (router) => {
   if (router.menu) {
     router.menu.open = true;
   } else {
-    router.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'));
+    //router.menu = new MDCTemporaryDrawer(document.querySelector('#drawer'));
     router.menu.open = true;
   }
 };
@@ -26,10 +28,10 @@ const Menu = connect(['router'], ({ router }) => {
   return (
     <div>
       <MenuAnchor openMenu={() => {openMenu(router);}} />
-      <aside className="mdc-temporary-drawer mdc-typography" id="drawer">
-        <nav className="mdc-temporary-drawer__drawer">
-          <header className="mdc-temporary-drawer__header">
-            <div className="mdc-temporary-drawer__header-content">
+      <aside id="drawer">
+        <nav>
+          <header>
+            <div>
               {'Mobx-Inferno-Starter'}
             </div>
           </header>

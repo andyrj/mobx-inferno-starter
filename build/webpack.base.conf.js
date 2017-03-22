@@ -5,14 +5,13 @@ module.exports = {
   entry: {
     site: './src/client.jsx',
     vendor: [
-      'history',
+      'history/createBrowserHistory',
       'http-hash',
       'inferno',
       'inferno-create-element',
       'inferno-component',
       'inferno-mobx',
       'mobx',
-      '@material/drawer',
       'shortid'
     ]
   }, // ensure dev tools don't get built into prod bundles
@@ -37,10 +36,10 @@ module.exports = {
       {
         test: /\.(jsx|js)$/,
         loader: 'babel-loader',
-        exclude: '/node_modules\/(?![' +
+        exclude: '/node_modules\/'/*(?![' +
         'material-components-web|' +
         '@material/drawer' +
-        '])/'
+        '])/'*/
       }
     ]
   }

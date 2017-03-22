@@ -30,6 +30,7 @@ module.exports = Object.assign({}, base, {
     libraryTarget: 'commonjs2'
   }),
   externals: Object.keys(require('../package.json').dependencies)
+    /* only needed because of material-components-web strange transpile requirement
     .filter((p) => {
       if (p.indexOf('material-components-web') > -1 ||
           p.indexOf('@material/') > -1 ) {
@@ -38,5 +39,5 @@ module.exports = Object.assign({}, base, {
         return true;
       }
     }
-  )
+  )*/
 });
