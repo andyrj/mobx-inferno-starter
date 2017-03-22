@@ -11,7 +11,7 @@ const DEV = process.env.NODE_ENV !== 'production';
 if (DEV) {
   // let remotedev = require('mobx-remotedev');  
   //  let enableLogging = require('mobx-logger').enableLogging;
-  require('inferno-devtools');
+  // require('inferno-devtools');
   useStrict(true);
   /*
   enableLogging({predicate: () => true,

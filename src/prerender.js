@@ -2,7 +2,7 @@
 import optimist from 'optimist';
 import fs from 'fs';
 import { resolve } from 'path';
-import { renderPath } from '../dist/server-bundle';
+// import { renderPath } from '../dist/server-bundle';
 
 // nginx will look for $uri with the .html extension
 const prerenderRoutes = [
@@ -24,7 +24,7 @@ let argv = optimist
             .alias('o', 'out')
             .default('o', 'site/')
             .argv;
-
+/*
 prerenderRoutes.forEach((route) => {
   fs.writeFile(
     resolve(__dirname, argv.out + route.filename), resolvePath(route.path), 
@@ -35,3 +35,4 @@ prerenderRoutes.forEach((route) => {
       console.log(`${route.filename} saved...`); //eslint-disable-line
   }); 
 });
+*/
